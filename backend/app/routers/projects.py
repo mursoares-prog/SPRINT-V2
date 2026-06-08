@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 from ..database import get_db
 from ..models import Project
 from ..schemas import ProjectIn, ProjectSummary
+from ..validation import validate_schedule
 
 router = APIRouter(prefix="/api/projects", tags=["projects"])
 
@@ -63,7 +64,7 @@ def create_project(payload: ProjectIn, db: Session = Depends(get_db)):
     db.add(project)
     db.commit()
     db.refresh(project)
-    return _full(project)
+    return {**_full(project), "validation": validate_schedule(data.get("inputs"), data.get("schedule"))}
 
 
 @router.put("/{project_id}")
@@ -77,7 +78,7 @@ def update_project(project_id: str, payload: ProjectIn, db: Session = Depends(ge
     project.data = payload.model_dump(exclude_none=False)
     db.commit()
     db.refresh(project)
-    return _full(project)
+    return {**_full(project), "validation": validate_schedule(project.data.get("inputs"), project.data.get("schedule"))}
 
 
 @router.delete("/{project_id}", status_code=status.HTTP_204_NO_CONTENT)

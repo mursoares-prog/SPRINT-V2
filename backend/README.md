@@ -28,6 +28,11 @@ uvicorn app.main:app --reload --port 8000
 | POST   | `/api/projects`        | Cria projeto (body = ProjectFile) |
 | PUT    | `/api/projects/{id}`   | Atualiza projeto |
 | DELETE | `/api/projects/{id}`   | Remove projeto |
+| POST   | `/api/schedule`        | Gera o cronograma autoritativo a partir de `{inputs}` (espelho Python do engine) |
+| POST   | `/api/schedule/validate` | Compara `{inputs, schedule}` com o cronograma recalculado e reporta divergências |
+
+O POST/PUT de projetos também retorna um campo `validation` (informativo, nunca
+bloqueia o save) com a comparação entre o cronograma salvo e o recalculado dos inputs.
 
 ## Estrutura
 
