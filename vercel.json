@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "cd abandono-app && npm ci",
+  "buildCommand": "cd abandono-app && npm run build",
+  "outputDirectory": "abandono-app/dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
