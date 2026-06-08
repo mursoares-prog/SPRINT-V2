@@ -1,0 +1,3637 @@
+{
+  "ABAN 001": {
+    "id": "ABAN 001",
+    "name": "Recolhimento de transponder com COT",
+    "category": "Mobilização",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 002": {
+    "id": "ABAN 002",
+    "name": "Recolhimento de transponder com ROV",
+    "category": "Mobilização",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 003": {
+    "id": "ABAN 003",
+    "name": "DMM",
+    "category": "Mobilização",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 004": {
+    "id": "ABAN 004",
+    "name": "DMM - Fase 1 / Stack-up SSUB no fundo",
+    "category": "Mobilização",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 005": {
+    "id": "ABAN 005",
+    "name": "DMM - Fase 2 / BOP no fundo",
+    "category": "Mobilização",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 006": {
+    "id": "ABAN 006",
+    "name": "Lançamento de transponder com COT e Calibração de sistema DP",
+    "category": "Mobilização",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 007": {
+    "id": "ABAN 007",
+    "name": "Lançamento de transponder com ROV e Calibração de sistema DP",
+    "category": "Mobilização",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 208": {
+    "id": "ABAN 208",
+    "name": "DMA",
+    "category": "Mobilização",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 008": {
+    "id": "ABAN 008",
+    "name": "Coluna de trabalho - Retirada de CCAP com garatéia",
+    "category": "Fase 0",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 009": {
+    "id": "ABAN 009",
+    "name": "Retirada de CCAP a cabo",
+    "category": "Fase 0",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "LWO"
+    ]
+  },
+  "ABAN 010": {
+    "id": "ABAN 010",
+    "name": "Retirar de TCap com ROV",
+    "category": "Fase 0",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 017": {
+    "id": "NOVO 017",
+    "name": "Preparação do Conjunto de WO com DPR/HCR para retirada/fundeio da TCap",
+    "category": "Fase 0",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 018": {
+    "id": "NOVO 018",
+    "name": "Preparação do Conjunto de WO com Riser Dual Bore para retirada/fundeio da TCap",
+    "category": "Fase 0",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 011": {
+    "id": "ABAN 011",
+    "name": "Descida do Conjunto de WO com DPR/HCR",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista"
+    ]
+  },
+  "ABAN 012": {
+    "id": "ABAN 012",
+    "name": "Descida do Conjunto de WO com Riser Dual Bore",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 019": {
+    "id": "NOVO 019",
+    "name": "Preparação do Conjunto de WO com DPR/HCR (Reentrada na ANM)",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 020": {
+    "id": "NOVO 020",
+    "name": "Preparação do Conjunto de WO com Riser Dual Bore (Reentrada na ANM)",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 013": {
+    "id": "ABAN 013",
+    "name": "Coluna de trabalho - Preparação e descida de TRT",
+    "category": "Descida WO",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "LWO"
+    ]
+  },
+  "ABAN 014": {
+    "id": "ABAN 014",
+    "name": "Flush DPR/HCR com agmar",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 015": {
+    "id": "ABAN 015",
+    "name": "Flush Riser Dual bore com agmar",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 016": {
+    "id": "ABAN 016",
+    "name": "Desalagamento DPR/HCR com Nitrogênio",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 017": {
+    "id": "ABAN 017",
+    "name": "Desalagamento Riser Dual Bore com Nitrogênio",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 209": {
+    "id": "ABAN 209",
+    "name": "Posicionamento de fluido inibido no Riser Dual Bore (pré conexão)",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 211": {
+    "id": "ABAN 211",
+    "name": "Preparação do Conjunto de WO e descida com DPR/HCR (Sonda LWO)",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "LWO"
+    ]
+  },
+  "ABAN 212": {
+    "id": "ABAN 212",
+    "name": "Preparação do Conjunto de WO e descida com DPR/HCR (SS)",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista"
+    ]
+  },
+  "ABAN 215": {
+    "id": "ABAN 215",
+    "name": "Posicionamento de fluido inibido no DPR/HCR (pré conexão)",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 216": {
+    "id": "ABAN 216",
+    "name": "Posicionamento de fluido inibido no DPR/HCR (pós conexão)",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 217": {
+    "id": "ABAN 217",
+    "name": "Posicionamento de fluido inibido no Riser Dual Bore (pós conexão)",
+    "category": "Descida WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 013": {
+    "id": "NOVO 013",
+    "name": "Descida do Conjunto de WO com DPR/HCR para retirada/fundeio da TCap",
+    "category": "Conexão ANM",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 014": {
+    "id": "NOVO 014",
+    "name": "Descida do Conjunto de WO com Riser Dual Bore para retirada/fundeio da TCap",
+    "category": "Conexão ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 018": {
+    "id": "ABAN 018",
+    "name": "Movimentação e conexão na Tcap",
+    "category": "Conexão ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 019": {
+    "id": "ABAN 019",
+    "name": "Ventilação de TCap",
+    "category": "Conexão ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 020": {
+    "id": "ABAN 020",
+    "name": "Desassentamento de TCap e fundeio no leito marinho",
+    "category": "Conexão ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 021": {
+    "id": "ABAN 021",
+    "name": "Desassentamento de TCap e retirada até a superfície com DPR/HCR",
+    "category": "Conexão ANM",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 022": {
+    "id": "ABAN 022",
+    "name": "Desassentamento de TCap e retirada até a superfície com Riser Dual Bore",
+    "category": "Conexão ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 023": {
+    "id": "ABAN 023",
+    "name": "Movimentação e conexão na ANM",
+    "category": "Conexão ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 024": {
+    "id": "ABAN 024",
+    "name": "Teste/verificação de interface contra S1",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 025": {
+    "id": "ABAN 025",
+    "name": "Teste/verificação de interface contra S2",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 026": {
+    "id": "ABAN 026",
+    "name": "Teste/verificação de interface contra Plug no TMF - Bore de produção",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 027": {
+    "id": "ABAN 027",
+    "name": "Teste/verificação de interface contra Plug no TMF - Bore de anular",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 028": {
+    "id": "ABAN 028",
+    "name": "Teste/verificação da ANM (bloco de produção)",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 029": {
+    "id": "ABAN 029",
+    "name": "Teste/verificação da ANM (bloco de anular)",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 030": {
+    "id": "ABAN 030",
+    "name": "Verificação de funcionalidade de DHSV (teste de influxo)",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 218": {
+    "id": "ABAN 218",
+    "name": "Teste funcional da ANM",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 226": {
+    "id": "ABAN 226",
+    "name": "Confirmação da estanqueidade do poço",
+    "category": "Testes ANM",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 031A": {
+    "id": "ABAN 031A",
+    "name": "Arame - Montagem e teste da unidade sobre SFT (sonda generalista)",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 031B": {
+    "id": "ABAN 031B",
+    "name": "Arame - Montagem e teste da unidade sobre SFT (sonda LWO)",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 032": {
+    "id": "ABAN 032",
+    "name": "Arame - Montagem e teste da unidade sobre Terminal Head - Bore de produção",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 033": {
+    "id": "ABAN 033",
+    "name": "Arame - Montagem e teste da unidade sobre Terminal Head - Bore de anular",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 034": {
+    "id": "ABAN 034",
+    "name": "Arame - Retirada de plug no TMF - Bore de produção",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 035": {
+    "id": "ABAN 035",
+    "name": "Arame - Retirada de plug no TMF - Bore de anular",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 036": {
+    "id": "ABAN 036",
+    "name": "Arame - Gabaritagem",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 037": {
+    "id": "ABAN 037",
+    "name": "Arame - Instalação de camisão",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2,
+    "nContSubruns": 1
+  },
+  "NOVO 021": {
+    "id": "NOVO 021",
+    "name": "Arame - Gabaritagem com camisão acoplado",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 038": {
+    "id": "ABAN 038",
+    "name": "Arame - Instalação de STV em nipple R 2,75\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 039": {
+    "id": "ABAN 039",
+    "name": "Arame - Instalação de STV em nipple F 2,81\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 040": {
+    "id": "ABAN 040",
+    "name": "Arame - Instalação de plug em nipple R 2,75\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 3
+  },
+  "ABAN 041": {
+    "id": "ABAN 041",
+    "name": "Arame - Instalação de plug em nipple F 2,81\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 3
+  },
+  "ABAN 042": {
+    "id": "ABAN 042",
+    "name": "Arame - Instalação de plug 3,75\" no TH",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 043": {
+    "id": "ABAN 043",
+    "name": "Arame - Instalação de BRV em nipple F 2,81\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 044": {
+    "id": "ABAN 044",
+    "name": "Arame - Instalação de BRV em nipple R 2,75\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 045": {
+    "id": "ABAN 045",
+    "name": "Arame - Perfuração da coluna (eFire)",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 046": {
+    "id": "ABAN 046",
+    "name": "Arame - Caçambeio para coleta de amostra/limpeza",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 047": {
+    "id": "ABAN 047",
+    "name": "Arame - Registro de pressão (RP)",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 048": {
+    "id": "ABAN 048",
+    "name": "Arame - Retirada de STV em nipple R 2,75\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 049": {
+    "id": "ABAN 049",
+    "name": "Arame - Retirada de STV em nipple F 2,81\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 050": {
+    "id": "ABAN 050",
+    "name": "Arame - Retirada de plug em nipple R 2,75\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 051": {
+    "id": "ABAN 051",
+    "name": "Arame - Retirada de plug em nipple F 2,81\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 052": {
+    "id": "ABAN 052",
+    "name": "Arame - Retirada de plug 3,75\" no TH",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 053": {
+    "id": "ABAN 053",
+    "name": "Arame - Retirada de BRV em nipple F 2,81\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 054": {
+    "id": "ABAN 054",
+    "name": "Arame - Retirada de BRV em nipple R 2,75\"",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 055": {
+    "id": "ABAN 055",
+    "name": "Arame - Retirada de camisão",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 056": {
+    "id": "ABAN 056",
+    "name": "Arame - Retirada de VGL",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 057": {
+    "id": "ABAN 057",
+    "name": "Arame - Instalação de VGL",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 058": {
+    "id": "ABAN 058",
+    "name": "Arame - Abertura de sliding sleeve",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 059": {
+    "id": "ABAN 059",
+    "name": "Arame - Fechamento de sliding sleeve",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 060": {
+    "id": "ABAN 060",
+    "name": "Arame - Estampagem",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 204": {
+    "id": "ABAN 204",
+    "name": "Arame - Desmontagem (sonda generalista)",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista"
+    ],
+    "isDismountOp": true
+  },
+  "ABAN 205": {
+    "id": "ABAN 205",
+    "name": "Arame - Desmontagem (sonda LWO)",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "LWO"
+    ],
+    "isDismountOp": true
+  },
+  "ABAN 220": {
+    "id": "ABAN 220",
+    "name": "Arame - Teste de influxo com N2 (plug) - Riser dual bore",
+    "category": "Arame",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 221": {
+    "id": "ABAN 221",
+    "name": "Arame - Teste de influxo com N2 (plug) - DPR",
+    "category": "Arame",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 234": {
+    "id": "ABAN 234",
+    "name": "Arame - Checagem de TOC - jogo de polias",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 001": {
+    "id": "NOVO 001",
+    "name": "Arame - Instalação de plug no TMF (bore de produção)",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "NOVO 002": {
+    "id": "NOVO 002",
+    "name": "Arame - Instalação de plug no TMF (bore anular)",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 061": {
+    "id": "ABAN 061",
+    "name": "Limpeza e Amortecimento - COP (bullheading diesel + FCBA)",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 062": {
+    "id": "ABAN 062",
+    "name": "Limpeza e Amortecimento - COP (bullheading MEG + FCBA)",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 063": {
+    "id": "ABAN 063",
+    "name": "Limpeza e Amortecimento - Anular A (Despressurização total + bullheading FCBA)",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 064": {
+    "id": "ABAN 064",
+    "name": "Limpeza e Amortecimento - Anular A (Steps despressurização + preenchimento de Anular A com diesel (\"top kill\"))",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 065": {
+    "id": "ABAN 065",
+    "name": "Limpeza e Amortecimento - Anular A (Steps despressurização + preenchimento de Anular A com MEG/FCBA (\"top kill\"))",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 219": {
+    "id": "ABAN 219",
+    "name": "Preenchimento de Anular A e Coluna com diesel",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 222": {
+    "id": "ABAN 222",
+    "name": "Limpeza e Amortecimento - Confirmação de limpeza do poço",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 003": {
+    "id": "NOVO 003",
+    "name": "Limpeza e Amortecimento - Anular A (bullheading diesel + FCBA)",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 004": {
+    "id": "NOVO 004",
+    "name": "Limpeza e Amortecimento - Anular A (bullheading FCBA)",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 005": {
+    "id": "NOVO 005",
+    "name": "Limpeza e Amortecimento - Anular A (bullheading MEG + FCBA)",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 006": {
+    "id": "NOVO 006",
+    "name": "Limpeza e Amortecimento - Anular A (bullheading diesel)",
+    "category": "Limpeza/Amortecimento",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 066": {
+    "id": "ABAN 066",
+    "name": "Limpeza de linha - DPR ou Bore 4\" > FLPO",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 067": {
+    "id": "ABAN 067",
+    "name": "Limpeza de linha - DPR ou Bore 4\" > XO > FLGL",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 068": {
+    "id": "ABAN 068",
+    "name": "Limpeza e Amortecimento - DPR ou Bore 4\" > COP/COI > Anular A > FLGL",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 069": {
+    "id": "ABAN 069",
+    "name": "Limpeza e Amortecimento - DPR ou Bore 4\" > COP/COI > Anular A > PXO > FLPO",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 070": {
+    "id": "ABAN 070",
+    "name": "Limpeza e Amortecimento - DPR ou Bore 4\" > XO > Anular A > COP/COI > FLPO",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 071": {
+    "id": "ABAN 071",
+    "name": "Limpeza e Amortecimento - DPR ou Bore 4\" > XO > Anular A > COP/COI > PXO > FLGL",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 072": {
+    "id": "ABAN 072",
+    "name": "Limpeza e Amortecimento - Bore 2\" > XO > FLPO",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 073": {
+    "id": "ABAN 073",
+    "name": "Limpeza e Amortecimento - Bore 2\" > FLGL",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 074": {
+    "id": "ABAN 074",
+    "name": "Limpeza e Amortecimento - Bore 2\" > XO > COP/COI > Anular A > FLGL",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 075": {
+    "id": "ABAN 075",
+    "name": "Limpeza e Amortecimento - Bore 2\" > XO > COP/COI > Anular A > PXO > FLPO",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 076": {
+    "id": "ABAN 076",
+    "name": "Limpeza e Amortecimento - Bore 2\" > Anular A > COP/COI > FLPO",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 077": {
+    "id": "ABAN 077",
+    "name": "Limpeza e Amortecimento - Bore 2\" > Anular A > COP/COI > PXO > FLGL",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 239": {
+    "id": "ABAN 239",
+    "name": "Limpeza de Flowline(s) - N2 Lift",
+    "category": "Limpeza de linha",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 078": {
+    "id": "ABAN 078",
+    "name": "Bombeio direto - obturação de reservatório com tampões de combate a perda",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 079": {
+    "id": "ABAN 079",
+    "name": "Bombeio direto - obturação de reservatório e preenchimento do poço com fluido eCSB",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 080": {
+    "id": "ABAN 080",
+    "name": "Bombeio direto - cimentação de COP",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 081": {
+    "id": "ABAN 081",
+    "name": "Bombeio direto - cimentação de Formação/tela + COP + Anular A (verificação por parâmetros operacionais)",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 082": {
+    "id": "ABAN 082",
+    "name": "Bombeio direto - cimentação de Formação/tela + COP + Anular A (verificação por perfilagem)",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 083": {
+    "id": "ABAN 083",
+    "name": "Bombeio direto - cimentação de COP + Anular A (verificação por parâmetros operacionais)",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 084": {
+    "id": "ABAN 084",
+    "name": "Bombeio direto - cimentação de COP + Anular A (verificação por perfilagem)",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 223": {
+    "id": "ABAN 223",
+    "name": "Bombeio direto - Circulação para resfriamento do poço (Riser DB)",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 224": {
+    "id": "ABAN 224",
+    "name": "Bombeio direto - Circulação para resfriamento do poço (HCR Duplo / Fundo do Mar)",
+    "category": "Bombeio Direto",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 085": {
+    "id": "ABAN 085",
+    "name": "Perfilagem/Cabo elétrico - Montagem e teste da unidade sobre SFT",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 086": {
+    "id": "ABAN 086",
+    "name": "Perfilagem/Cabo elétrico - Montagem e teste da unidade sobre Terminal Head - Bore de produção",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 087": {
+    "id": "ABAN 087",
+    "name": "Perfilagem/Cabo elétrico - Montagem e teste da unidade sobre Terminal Head - Bore de anular",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 088": {
+    "id": "ABAN 088",
+    "name": "Perfilagem/Cabo elétrico - Retirada de plug no TMF com Stroker - Bore de produção",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nContSubruns": 1
+  },
+  "ABAN 089": {
+    "id": "ABAN 089",
+    "name": "Perfilagem/Cabo elétrico - Retirada de plug no TMF com Stroker - Bore de anular",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nContSubruns": 1
+  },
+  "ABAN 090": {
+    "id": "ABAN 090",
+    "name": "Perfilagem/Cabo elétrico - Retirada de STV em nipple R 2,75\" com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 091": {
+    "id": "ABAN 091",
+    "name": "Perfilagem/Cabo elétrico - Retirada de STV em nipple F 2,81\" com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 092": {
+    "id": "ABAN 092",
+    "name": "Perfilagem/Cabo elétrico - Retirada de plug em nipple R 2,75\" com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nContSubruns": 1
+  },
+  "ABAN 093": {
+    "id": "ABAN 093",
+    "name": "Perfilagem/Cabo elétrico - Retirada de plug em nipple F 2,81\" com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nContSubruns": 1
+  },
+  "ABAN 094": {
+    "id": "ABAN 094",
+    "name": "Perfilagem/Cabo elétrico - Retirada de plug no TH com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nContSubruns": 1
+  },
+  "ABAN 095": {
+    "id": "ABAN 095",
+    "name": "Perfilagem/Cabo elétrico - Retirada de BRV em nipple F 2,81\" com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 096": {
+    "id": "ABAN 096",
+    "name": "Perfilagem/Cabo elétrico - Retirada de BRV em nipple R 2,75\" com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 097": {
+    "id": "ABAN 097",
+    "name": "Perfilagem/Cabo elétrico - Retirada de camisão com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 098": {
+    "id": "ABAN 098",
+    "name": "Perfilagem/Cabo elétrico - Gabaritagem",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 099": {
+    "id": "ABAN 099",
+    "name": "Perfilagem/Cabo elétrico - Perfilagem para investigação de furo na COP (PLT + Noise Tool)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 100": {
+    "id": "ABAN 100",
+    "name": "Perfilagem/Cabo elétrico - Perfilagem para investigação de fluxo no Anular A (Perfil C/O)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 101": {
+    "id": "ABAN 101",
+    "name": "Perfilagem/Cabo elétrico - Perfuração da COP/COI (tubing puncher)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 102": {
+    "id": "ABAN 102",
+    "name": "Perfilagem/Cabo elétrico - Perfuração da COP/COI (deep penetration)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 103": {
+    "id": "ABAN 103",
+    "name": "Perfilagem/Cabo elétrico - Perfuração de revestimento/liner em modo BOP",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "noDismountAfter": true
+  },
+  "ABAN 104": {
+    "id": "ABAN 104",
+    "name": "Perfilagem/Cabo elétrico - Registro de pressão (RP)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 105": {
+    "id": "ABAN 105",
+    "name": "Perfilagem/Cabo elétrico - Avaliação de cimentação em modo ANM (through tubing)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 106": {
+    "id": "ABAN 106",
+    "name": "Perfilagem/Cabo elétrico - Avaliação de cimentação em modo BOP (through casing)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "noDismountAfter": true
+  },
+  "ABAN 107": {
+    "id": "ABAN 107",
+    "name": "Perfilagem/Cabo elétrico - Avaliação de cimentação a mar aberto (through casing, sem coluna guia)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 108": {
+    "id": "ABAN 108",
+    "name": "Perfilagem/Cabo elétrico - Instalação de BPP em revestimento de produção a mar aberto",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 109": {
+    "id": "ABAN 109",
+    "name": "Perfilagem/Cabo elétrico - Instalação de BPP em revestimento de produção em modo BOP",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 110": {
+    "id": "ABAN 110",
+    "name": "Perfilagem/Cabo elétrico - Cimentação com dump bailer",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 111": {
+    "id": "ABAN 111",
+    "name": "Perfilagem/Cabo elétrico - Perfilagem para investigação de diâmetro/cáliper",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 112": {
+    "id": "ABAN 112",
+    "name": "Perfilagem/Cabo elétrico - Perfilagem com ferramenta de imageamento (espectro visual)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 009": {
+    "id": "NOVO 009",
+    "name": "Perfilagem/Cabo elétrico - Perfilagem para investigação de prisão de coluna (Free Point)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 010": {
+    "id": "NOVO 010",
+    "name": "Perfilagem/Cabo elétrico - Corte de coluna a mar aberto",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 113": {
+    "id": "ABAN 113",
+    "name": "Perfilagem/Cabo elétrico - Corte de coluna (cortador mecânico)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 114": {
+    "id": "ABAN 114",
+    "name": "Perfilagem/Cabo elétrico - Retirada de VGL com Stroker",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 115": {
+    "id": "ABAN 115",
+    "name": "Perfilagem/Cabo elétrico - Split shot",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 116": {
+    "id": "ABAN 116",
+    "name": "Perfilagem/Cabo elétrico - String shot",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 117": {
+    "id": "ABAN 117",
+    "name": "Perfilagem/Cabo elétrico - Corte de coluna (cortador químico)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 118": {
+    "id": "ABAN 118",
+    "name": "Perfilagem/Cabo elétrico - Corte de coluna (cortador a plasma)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 225": {
+    "id": "ABAN 225",
+    "name": "Perfilagem/Cabo elétrico - Corte de coluna (explosivo)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 237": {
+    "id": "ABAN 237",
+    "name": "Perfilagem/Cabo elétrico - Instalação de tampão de alta expansão (TAE)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 238": {
+    "id": "ABAN 238",
+    "name": "Perfilagem/Cabo elétrico - Instalação de tampão de bismuto",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 242": {
+    "id": "ABAN 242",
+    "name": "Perfilagem/Cabo elétrico - Desmobilização (sonda LWO)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isDismountOp": true
+  },
+  "ABAN 243": {
+    "id": "ABAN 243",
+    "name": "Perfilagem/Cabo elétrico - Desmobilização (sonda generalista)",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isDismountOp": true
+  },
+  "NOVO 007": {
+    "id": "NOVO 007",
+    "name": "Perfilagem/Cabo elétrico - Checagem de TOC - jogo de polias",
+    "category": "Cabo Elétrico",
+    "technology": "electric",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 008": {
+    "id": "NOVO 008",
+    "name": "Flexitubo - Gabaritagem com motor de fundo e broca",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 119": {
+    "id": "ABAN 119",
+    "name": "Flexitubo - Montagem e teste da unidade sobre SFT",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 120": {
+    "id": "ABAN 120",
+    "name": "Flexitubo - Montagem e teste da unidade sobre Terminal Head - Bore de anular",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 121": {
+    "id": "ABAN 121",
+    "name": "Flexitubo - Montagem e teste da unidade sobre Terminal Head - Bore de produção",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 122": {
+    "id": "ABAN 122",
+    "name": "Flexitubo - Retirada de plug no TMF - Bore de anular",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 123": {
+    "id": "ABAN 123",
+    "name": "Flexitubo - Retirada de plug no TMF - Bore de produção",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 124": {
+    "id": "ABAN 124",
+    "name": "Flexitubo - Gabaritagem",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 125": {
+    "id": "ABAN 125",
+    "name": "Flexitubo - Jateamento (SpinCat ou jateadora rotativa) + Gabaritagem",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 126": {
+    "id": "ABAN 126",
+    "name": "Flexitubo - Instalação de camisão",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 127": {
+    "id": "ABAN 127",
+    "name": "Flexitubo - Instalação de plug em nipple F 2,81\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 128": {
+    "id": "ABAN 128",
+    "name": "Flexitubo - Instalação de plug em nipple R 2,75\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 129": {
+    "id": "ABAN 129",
+    "name": "Flexitubo - Instalação de plug no TH",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 130": {
+    "id": "ABAN 130",
+    "name": "Flexitubo - Instalação de STV em nipple F 2,81\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 131": {
+    "id": "ABAN 131",
+    "name": "Flexitubo - Instalação de STV em nipple R 2,75\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 132": {
+    "id": "ABAN 132",
+    "name": "Flexitubo - Instalação de BRV em nipple F 2,81\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 133": {
+    "id": "ABAN 133",
+    "name": "Flexitubo - Instalação de BRV em nipple R 2,75\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 134": {
+    "id": "ABAN 134",
+    "name": "Flexitubo - Retirada de camisão",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 135": {
+    "id": "ABAN 135",
+    "name": "Flexitubo - Retirada de VGL",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 136": {
+    "id": "ABAN 136",
+    "name": "Flexitubo - Retirada de STV em nipple R 2,75\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 137": {
+    "id": "ABAN 137",
+    "name": "Flexitubo - Retirada de STV em nipple F 2,81\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 138": {
+    "id": "ABAN 138",
+    "name": "Flexitubo - Retirada de plug em nipple R 2,75\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 139": {
+    "id": "ABAN 139",
+    "name": "Flexitubo - Retirada de plug em nipple F 2,81\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 140": {
+    "id": "ABAN 140",
+    "name": "Flexitubo - Retirada de plug no TH",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "nRuns": 2
+  },
+  "ABAN 141": {
+    "id": "ABAN 141",
+    "name": "Flexitubo - Retirada de BRV em nipple F 2,81\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 142": {
+    "id": "ABAN 142",
+    "name": "Flexitubo - Retirada de BRV em nipple R 2,75\"",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 144": {
+    "id": "ABAN 144",
+    "name": "Flexitubo - Abertura de slide sleeve",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 145": {
+    "id": "ABAN 145",
+    "name": "Flexitubo - Fechamento de slide sleeve",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 146": {
+    "id": "ABAN 146",
+    "name": "Flexitubo - Estampagem",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 147": {
+    "id": "ABAN 147",
+    "name": "Flexitubo - Registro de pressão (RP)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 149": {
+    "id": "ABAN 149",
+    "name": "Flexitubo - Avaliação de cimentação em modo ANM (through tubing)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 150": {
+    "id": "ABAN 150",
+    "name": "Flexitubo - Corte de coluna",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 151": {
+    "id": "ABAN 151",
+    "name": "Flexitubo - Perfilagem para investigação de fluxo no Anular A (Perfil C/O)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 152": {
+    "id": "ABAN 152",
+    "name": "Flexitubo - Perfilagem para investigação de furo na COP (PLT + Noise Tool)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 153": {
+    "id": "ABAN 153",
+    "name": "Flexitubo - Perfuração da coluna (deep penetration)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 154": {
+    "id": "ABAN 154",
+    "name": "Flexitubo - Perfuração da coluna (tubing puncher)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 155": {
+    "id": "ABAN 155",
+    "name": "Flexitubo - Cimentação anular A com CR (formação isolada previamente)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 156": {
+    "id": "ABAN 156",
+    "name": "Flexitubo - Cimentação anular A com CR + Interior da COP (formação isolada previamente)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 157": {
+    "id": "ABAN 157",
+    "name": "Flexitubo - Cimentação Interior da COP (formação isolada previamente)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 158": {
+    "id": "ABAN 158",
+    "name": "Flexitubo - Cimentação anular A com CR + Interior da COP (formação NÃO isolada previamente)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 159": {
+    "id": "ABAN 159",
+    "name": "Flexitubo - Cimentação Interior da COP (formação NÃO isolada previamente)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 160": {
+    "id": "ABAN 160",
+    "name": "Flexitubo - Cimentação Interior de revestimento a mar aberto (com coluna guia)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 162": {
+    "id": "ABAN 162",
+    "name": "Flexitubo - Instalação de BPR ou BPP",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 163": {
+    "id": "ABAN 163",
+    "name": "Flexitubo - Recuperação de BPR",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 164": {
+    "id": "ABAN 164",
+    "name": "Flexitubo - Operação com Packer Multiset",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 232": {
+    "id": "ABAN 232",
+    "name": "Flexitubo - Checagem de topo de cimento com peso",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 240": {
+    "id": "ABAN 240",
+    "name": "Flexitubo - Desmobilização (sonda LWO)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "LWO"
+    ],
+    "isDismountOp": true
+  },
+  "ABAN 241": {
+    "id": "ABAN 241",
+    "name": "Flexitubo - Desmobilização (sonda generalista)",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista"
+    ],
+    "isDismountOp": true
+  },
+  "ABAN 165": {
+    "id": "ABAN 165",
+    "name": "Dissociação de hidrato na ANM (bloco de produção) com DPR/HCR",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 166": {
+    "id": "ABAN 166",
+    "name": "Dissociação de hidrato na ANM (bloco de anular) com DPR/HCR",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 167": {
+    "id": "ABAN 167",
+    "name": "Dissociação de hidrato na FLL de produção com DPR/HCR sem BRV",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 168": {
+    "id": "ABAN 168",
+    "name": "Dissociação de hidrato na FLL de anular com DPR/HCR sem BRV",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 169": {
+    "id": "ABAN 169",
+    "name": "Dissociação de hidrato na ANM (bloco de produção) com Riser Dual Bore",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 170": {
+    "id": "ABAN 170",
+    "name": "Dissociação de hidrato na ANM (bloco de anular) com Riser Dual Bore",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 171": {
+    "id": "ABAN 171",
+    "name": "Dissociação de hidrato na FLL de produção com Riser Dual Bore sem BRV",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 172": {
+    "id": "ABAN 172",
+    "name": "Dissociação de hidrato na FLL de anular com Riser Dual Bore sem BRV",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 173": {
+    "id": "ABAN 173",
+    "name": "Dissociação de hidrato na FLL de produção com DPR/HCR com BRV",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 174": {
+    "id": "ABAN 174",
+    "name": "Dissociação de hidrato na FLL de anular com DPR/HCR com BRV",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 175": {
+    "id": "ABAN 175",
+    "name": "Dissociação de hidrato na FLL de produção com Riser Dual Bore com BRV",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 176": {
+    "id": "ABAN 176",
+    "name": "Dissociação de hidrato na FLL de anular com Riser Dual Bore com BRV",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 177": {
+    "id": "ABAN 177",
+    "name": "Dissociação de hidrato na TCap - jateamento de água aquecida",
+    "category": "Hidrato",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 178": {
+    "id": "ABAN 178",
+    "name": "Desassentamento de ANM e retirada até a superfície com DPR/HCR (SS)",
+    "category": "Retirada WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista"
+    ]
+  },
+  "ABAN 179": {
+    "id": "ABAN 179",
+    "name": "Retirada de Conjunto de WO com Riser Dual Bore",
+    "category": "Retirada WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 180": {
+    "id": "ABAN 180",
+    "name": "Desmobilização de FIBOP/BOPW/TRT/ANM",
+    "category": "Retirada WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 181": {
+    "id": "ABAN 181",
+    "name": "Desmobilização de TRT/ANM",
+    "category": "Retirada WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 207": {
+    "id": "ABAN 207",
+    "name": "Retirada de Conjunto de WO com DPR (LWO)",
+    "category": "Retirada WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "LWO"
+    ]
+  },
+  "ABAN 210": {
+    "id": "ABAN 210",
+    "name": "Retirada de Conjunto de WO + ANM com Riser Dual Bore",
+    "category": "Retirada WO",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 213": {
+    "id": "ABAN 213",
+    "name": "Retirada de Conjunto de WO até a superfície com DPR/HCR (SS)",
+    "category": "Retirada WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista"
+    ]
+  },
+  "ABAN 214": {
+    "id": "ABAN 214",
+    "name": "Retirada de Conjunto de WO + ANM com DPR (LWO)",
+    "category": "Retirada WO",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "LWO"
+    ]
+  },
+  "ABAN 182": {
+    "id": "ABAN 182",
+    "name": "Coluna de trabalho - Preparação e descida de FETH a mar aberto",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 183": {
+    "id": "ABAN 183",
+    "name": "Coluna de trabalho - Preparação e descida de FIBAP a mar aberto",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 184": {
+    "id": "ABAN 184",
+    "name": "BOP - Preparação e descida",
+    "category": "BOP",
+    "technology": "bop",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isMountOp": true
+  },
+  "ABAN 185": {
+    "id": "ABAN 185",
+    "name": "Coluna de trabalho - Preparação e descida de FETH em modo BOP",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 186": {
+    "id": "ABAN 186",
+    "name": "Coluna de trabalho - Preparação e descida de THRT em modo BOP",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 187": {
+    "id": "ABAN 187",
+    "name": "Coluna de trabalho - Desassentamento de TH e retirada de TH+COP/COI com FETH a mar aberto",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 188": {
+    "id": "ABAN 188",
+    "name": "Coluna de trabalho - Desassentamento de FIBAP e retirada de BAP+TH+COP/COI a mar aberto",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 189": {
+    "id": "ABAN 189",
+    "name": "Coluna de trabalho - Desassentamento de TH e retirada de TH+COP/COI com FETH em modo BOP",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 190": {
+    "id": "ABAN 190",
+    "name": "Coluna de trabalho - Desassentamento de TH e retirada de TH+COP/COI com THRT em modo BOP",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 191": {
+    "id": "ABAN 191",
+    "name": "Coluna de trabalho - Pescaria de cauda com overshot",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 192": {
+    "id": "ABAN 192",
+    "name": "Coluna de trabalho - Pescaria de packer com ferramenta específica",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 193": {
+    "id": "ABAN 193",
+    "name": "Coluna de trabalho - Corte de packer com sapata de lavagem",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 194": {
+    "id": "ABAN 194",
+    "name": "Coluna de trabalho - Estampagem",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 195": {
+    "id": "ABAN 195",
+    "name": "Coluna de trabalho - Canhoneio TCP em revestimento/liner em modo BOP",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 196": {
+    "id": "ABAN 196",
+    "name": "Coluna de trabalho - Corte de revestimento/liner em modo BOP",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 197": {
+    "id": "ABAN 197",
+    "name": "Coluna de trabalho - Milling de revestimento/liner em modo BOP",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 198": {
+    "id": "ABAN 198",
+    "name": "Coluna de trabalho - BPP",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 199": {
+    "id": "ABAN 199",
+    "name": "Coluna de trabalho - BPP + Tampão de cimento",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 200": {
+    "id": "ABAN 200",
+    "name": "Coluna de trabalho - Tampão de cimento com pata de mula",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 201": {
+    "id": "ABAN 201",
+    "name": "Coluna de trabalho - Operação com packer de operação",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 202": {
+    "id": "ABAN 202",
+    "name": "Coluna de trabalho - Recimentação/correção de cimento com CR",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 203": {
+    "id": "ABAN 203",
+    "name": "BOP - Preparação e retirada",
+    "category": "BOP",
+    "technology": "bop",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ],
+    "isDismountOp": true
+  },
+  "ABAN 228": {
+    "id": "ABAN 228",
+    "name": "Teste do BOP com Test Plug",
+    "category": "BOP",
+    "technology": "bop",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 229": {
+    "id": "ABAN 229",
+    "name": "Teste do BOP com coluna flutuada",
+    "category": "BOP",
+    "technology": "bop",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 011": {
+    "id": "NOVO 011",
+    "name": "BOP - Teste do BOP com ponteira apoiada sobre TH",
+    "category": "BOP",
+    "technology": "bop",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 012": {
+    "id": "NOVO 012",
+    "name": "BOP - Teste do BOP com FETH apoiada sobre TH",
+    "category": "BOP",
+    "technology": "bop",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 230": {
+    "id": "ABAN 230",
+    "name": "Efetuar teste de influxo do CSB permanente",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 231": {
+    "id": "ABAN 231",
+    "name": "Coluna de trabalho - Complemento/Correção de cimentação com PWC",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 233": {
+    "id": "ABAN 233",
+    "name": "Coluna de trabalho - Condicionamento do revestimento",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 235": {
+    "id": "ABAN 235",
+    "name": "Coluna de trabalho - Checagem de TOC e corte de tampão",
+    "category": "Coluna de Trabalho",
+    "technology": "workstring",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 236": {
+    "id": "ABAN 236",
+    "name": "BOP - Troca de fluido do riser",
+    "category": "BOP",
+    "technology": "bop",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 206": {
+    "id": "ABAN 206",
+    "name": "Montagem de ITF",
+    "category": "Outros",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 227": {
+    "id": "ABAN 227",
+    "name": "Jateamento do housing com FEJAT",
+    "category": "Outros",
+    "technology": "none",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "NOVO 015": {
+    "id": "NOVO 015",
+    "name": "Montagem de SFT e arranjo de superfície",
+    "category": "Outros",
+    "technology": "none",
+    "applicableRig": [
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista"
+    ]
+  },
+  "NOVO 016": {
+    "id": "NOVO 016",
+    "name": "Montagem de Terminal Head e arranjo de superfície",
+    "category": "Outros",
+    "technology": "none",
+    "applicableRig": [
+      "ANC"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  }
+}

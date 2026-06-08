@@ -1,0 +1,295 @@
+[
+  {
+    "id": "size_match_outros_2_75",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de STV em nipple R 2,75\"",
+    "technology": null,
+    "data": {
+      "nipplesOutros": "Nipple R 2,75\"",
+      "nipplesOutrosDepth": "3500"
+    },
+    "expected": "3500"
+  },
+  {
+    "id": "size_match_skip_empty_depth",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de STV em nipple R 2,75\"",
+    "technology": null,
+    "data": {
+      "nipple275": "Nipple F 2,75\"",
+      "nipple275Depth": "",
+      "nipplesOutros": "Nipple R 2,75\"",
+      "nipplesOutrosDepth": "3500"
+    },
+    "expected": "3500"
+  },
+  {
+    "id": "size_match_no_depth_null",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de STV em nipple R 2,75\"",
+    "technology": null,
+    "data": {
+      "nipplesOutros": "Nipple R 2,75\"",
+      "nipplesOutrosDepth": ""
+    },
+    "expected": null
+  },
+  {
+    "id": "size_match_plug_th_3_75",
+    "fn": "nippleDepthForBha",
+    "name": "Retirada de plug 3,75\" no TH",
+    "technology": null,
+    "data": {
+      "nipple281": "Nipple F ou DB 3,75\"",
+      "nipple281Depth": "2810"
+    },
+    "expected": "2810"
+  },
+  {
+    "id": "size_match_dot_separator",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de plug em nipple F 3,81\"",
+    "technology": null,
+    "data": {
+      "nipple381": "Nipple F 3.81\"",
+      "nipple381Depth": "3810"
+    },
+    "expected": "3810"
+  },
+  {
+    "id": "tmf_anular",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de plug TMF anular",
+    "technology": null,
+    "data": {
+      "nipple375": "",
+      "nipple375Depth": "2000"
+    },
+    "expected": "2000"
+  },
+  {
+    "id": "tmf_producao",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de plug TMF produção",
+    "technology": null,
+    "data": {
+      "nipple381": "",
+      "nipple381Depth": "1900"
+    },
+    "expected": "1900"
+  },
+  {
+    "id": "th_anular",
+    "fn": "nippleDepthForBha",
+    "name": "Plug no TH anular",
+    "technology": null,
+    "data": {
+      "nippleTHanular": "",
+      "nippleTHanularDepth": "2100"
+    },
+    "expected": "2100"
+  },
+  {
+    "id": "th_producao",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de plug no TH",
+    "technology": null,
+    "data": {
+      "nipple281": "",
+      "nipple281Depth": "2200"
+    },
+    "expected": "2200"
+  },
+  {
+    "id": "th_na_null",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de plug no TH",
+    "technology": null,
+    "data": {
+      "nipple281": "Não Aplicável",
+      "nipple281Depth": "2200"
+    },
+    "expected": null
+  },
+  {
+    "id": "camisao_dhsv",
+    "fn": "nippleDepthForBha",
+    "name": "Instalação de camisão",
+    "technology": null,
+    "data": {
+      "nippleDhsv": "Perfil DB 3,68\" (DHSV)",
+      "nippleDhsvDepth": "1500"
+    },
+    "expected": "1500"
+  },
+  {
+    "id": "no_match",
+    "fn": "nippleDepthForBha",
+    "name": "Mobilização de sonda",
+    "technology": null,
+    "data": {},
+    "expected": null
+  },
+  {
+    "id": "cam_fields_gs4",
+    "fn": "camisaoDhsvFields",
+    "name": "Instalação de camisão",
+    "technology": null,
+    "data": {
+      "nippleDhsv": "Perfil DB 3,68\" (DHSV)",
+      "nippleDhsvDepth": "1500"
+    },
+    "expected": {
+      "camDiamNom": "3,68",
+      "aplicadorCamisao": "GS 4\""
+    }
+  },
+  {
+    "id": "cam_fields_gs5",
+    "fn": "camisaoDhsvFields",
+    "name": "Retirada de camisão",
+    "technology": null,
+    "data": {
+      "nippleDhsv": "Perfil 5,00\""
+    },
+    "expected": {
+      "camDiamNom": "5,00",
+      "aplicadorCamisao": "GS 5\""
+    }
+  },
+  {
+    "id": "cam_fields_not_camisao",
+    "fn": "camisaoDhsvFields",
+    "name": "Instalação de plug",
+    "technology": null,
+    "data": {
+      "nippleDhsv": "Perfil DB 3,68\""
+    },
+    "expected": null
+  },
+  {
+    "id": "cam_fields_na",
+    "fn": "camisaoDhsvFields",
+    "name": "Instalação de camisão",
+    "technology": null,
+    "data": {
+      "nippleDhsv": "Não Aplicável"
+    },
+    "expected": null
+  },
+  {
+    "id": "gab_combo_275_281",
+    "fn": "gabaritoFields",
+    "name": "Gabaritagem da cauda",
+    "technology": null,
+    "data": {
+      "nipple275": "Nipple F 2,75\"",
+      "nipple275Depth": "2750",
+      "nipplesOutros": "Nipple R 2,81\"",
+      "nipplesOutrosDepth": "2810"
+    },
+    "expected": {
+      "diamLocalizador": "2,81",
+      "diamEstampador": "2,50",
+      "profFinal": "2750"
+    }
+  },
+  {
+    "id": "gab_combo_350_356",
+    "fn": "gabaritoFields",
+    "name": "Gabaritagem da cauda",
+    "technology": null,
+    "data": {
+      "nipple275": "Nipple 3,50\"",
+      "nipple275Depth": "3500",
+      "nipplesOutros": "Nipple 3,56\"",
+      "nipplesOutrosDepth": "3560"
+    },
+    "expected": {
+      "diamLocalizador": "3,56",
+      "diamEstampador": "3,00",
+      "profFinal": "3500"
+    }
+  },
+  {
+    "id": "gab_no_combo_only_prof",
+    "fn": "gabaritoFields",
+    "name": "Gabaritagem da cauda",
+    "technology": null,
+    "data": {
+      "nipple275": "Nipple 4,00\"",
+      "nipple275Depth": "4000",
+      "nipplesOutros": "Nipple 5,00\"",
+      "nipplesOutrosDepth": "5000"
+    },
+    "expected": {
+      "profFinal": "4000"
+    }
+  },
+  {
+    "id": "gab_not_gabarito",
+    "fn": "gabaritoFields",
+    "name": "Instalação de plug",
+    "technology": null,
+    "data": {
+      "nipple275": "Nipple F 2,75\"",
+      "nipple275Depth": "2750"
+    },
+    "expected": null
+  },
+  {
+    "id": "bha_wireline_instala",
+    "fn": "bhaDerivedDepth",
+    "name": "Instalação de STV em nipple R 2,75\"",
+    "technology": "wireline",
+    "data": {
+      "nipplesOutros": "Nipple R 2,75\"",
+      "nipplesOutrosDepth": "3500"
+    },
+    "expected": "3500"
+  },
+  {
+    "id": "bha_wireline_no_action",
+    "fn": "bhaDerivedDepth",
+    "name": "Gabaritagem da cauda",
+    "technology": "wireline",
+    "data": {
+      "nipplesOutros": "Nipple R 2,75\"",
+      "nipplesOutrosDepth": "3500"
+    },
+    "expected": null
+  },
+  {
+    "id": "bha_electric_stroker",
+    "fn": "bhaDerivedDepth",
+    "name": "Stroker para plug 3,75\" no TH",
+    "technology": "electric",
+    "data": {
+      "nipple281": "Nipple F ou DB 3,75\"",
+      "nipple281Depth": "2810"
+    },
+    "expected": "2810"
+  },
+  {
+    "id": "bha_ct_plug_instala",
+    "fn": "bhaDerivedDepth",
+    "name": "Instalação de plug em nipple R 2,75\" com FT",
+    "technology": "ct",
+    "data": {
+      "nipplesOutros": "Nipple R 2,75\"",
+      "nipplesOutrosDepth": "3500"
+    },
+    "expected": "3500"
+  },
+  {
+    "id": "bha_ct_plug_no_action",
+    "fn": "bhaDerivedDepth",
+    "name": "Gabaritagem com plug",
+    "technology": "ct",
+    "data": {
+      "nipplesOutros": "Nipple R 2,75\"",
+      "nipplesOutrosDepth": "3500"
+    },
+    "expected": null
+  }
+]

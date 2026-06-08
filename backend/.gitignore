@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Banco local (SQLite) — não versionar dados
+*.db
+*.db-journal
+*.sqlite3
+
+# Ambiente
+.env

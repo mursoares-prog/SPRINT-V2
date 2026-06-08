@@ -1,0 +1,3438 @@
+{
+  "FSU_TT_FT": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 018",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 020",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 012",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CSB_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "JATEAR_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FT_CEMENT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "no_pdi",
+        "isContingency": false
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 179",
+        "phase": "Fase 1A",
+        "condition": "not_remove_anm"
+      },
+      {
+        "packageId": "ABAN 210",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 017",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 019",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 011",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CSB_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "JATEAR_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FT_CEMENT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "no_pdi",
+        "isContingency": false
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 213",
+        "phase": "Fase 1A",
+        "condition": "not_remove_anm"
+      },
+      {
+        "packageId": "ABAN 178",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      }
+    ]
+  },
+  "FSU_TT_BDC": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 018",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 020",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 012",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CSB_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BDC_FT_CONTING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 223",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BDC_CEMENT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 234",
+        "phase": "Fase 1A",
+        "transitionTechnology": "none"
+      },
+      {
+        "packageId": "ABAN 204",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "no_pdi",
+        "isContingency": false
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 179",
+        "phase": "Fase 1A",
+        "condition": "not_remove_anm"
+      },
+      {
+        "packageId": "ABAN 210",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 017",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 019",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 011",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CSB_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BDC_FT_CONTING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 224",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BDC_CEMENT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 234",
+        "phase": "Fase 1A",
+        "transitionTechnology": "none"
+      },
+      {
+        "packageId": "ABAN 204",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "no_pdi",
+        "isContingency": false
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 213",
+        "phase": "Fase 1A",
+        "condition": "not_remove_anm"
+      },
+      {
+        "packageId": "ABAN 178",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      }
+    ]
+  },
+  "FSU_Conv_BOP": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 018",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 020",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 012",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 210",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 017",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 019",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 011",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 178",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ]
+  },
+  "FSU_Conv_RCMA": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 018",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 020",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 012",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RCMA_CSB_PRINCIPAL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 210",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 183",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 188",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "RCMA_CEMENT_LOG_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 017",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 019",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 011",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RCMA_CSB_PRINCIPAL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 178",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 183",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 188",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "RCMA_CEMENT_LOG_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      }
+    ]
+  },
+  "FSU_Sup_COP": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 018",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 020",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 012",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 210",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "CAUDA_INTER_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 017",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 019",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 011",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 178",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "CAUDA_INTER_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ]
+  },
+  "FSU_Sup_PWC": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 018",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 020",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 012",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 210",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "CAUDA_INTER_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 017",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 019",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 011",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 178",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "CAUDA_INTER_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ]
+  },
+  "FS1_Mec": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 018",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 020",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 012",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 179",
+        "phase": "Fase 1A",
+        "condition": "not_remove_anm"
+      },
+      {
+        "packageId": "ABAN 210",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 017",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "NOVO 019",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 011",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ITF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "RISER_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TCAP_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 023",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "POST_ANM_FLUID_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 024",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 025",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 218",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_HYDRATE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANM_VALVE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 028",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 029",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 030",
+        "phase": "Fase 1A",
+        "condition": "dhsv_no_sleeve"
+      },
+      {
+        "packageId": "PLUG_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ANULAR_A_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DHSV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "CAMISAO_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "INVESTIGATION_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "TAIL_FISHING_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "VGL_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "BRV_INSERTABLE_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "STDV_TEST_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "PERF_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "LIMPEZA_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FS1_CSB_PRIMARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "UEP_CLEAN_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 222",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 113",
+        "phase": "Fase 1A",
+        "condition": "stuck_risk"
+      },
+      {
+        "packageId": "FS1_CSB_SECONDARY_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "FLOWLINE_INJECT",
+        "phase": "Extra Abandono",
+        "condition": "clean_flowlines"
+      },
+      {
+        "packageId": "TMF_PLUG_END_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "DISMOUNT_INJECT",
+        "phase": "Fase 1A"
+      },
+      {
+        "packageId": "ABAN 213",
+        "phase": "Fase 1A",
+        "condition": "not_remove_anm"
+      },
+      {
+        "packageId": "ABAN 178",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      },
+      {
+        "packageId": "ABAN 180",
+        "phase": "Fase 1B",
+        "condition": "remove_anm"
+      }
+    ]
+  },
+  "FS2_Conv_BOP": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "PACKER_FISHING_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "PACKER_FISHING_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ]
+  },
+  "FS2_Conv_RCMA": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 183",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 188",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "RCMA_CEMENT_LOG_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "PACKER_FISHING_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 183",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 188",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "RCMA_CEMENT_LOG_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "PACKER_FISHING_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      }
+    ]
+  },
+  "FS2_Sup_COP": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "CAUDA_INTER_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "PACKER_FISHING_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "CAUDA_INTER_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "PACKER_FISHING_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ]
+  },
+  "FS2_Sup_PWC": {
+    "ANC": [
+      {
+        "packageId": "ABAN 208",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "CAUDA_INTER_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "PACKER_FISHING_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ],
+    "DP": [
+      {
+        "packageId": "ABAN 002",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 001",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "ABAN 003",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 007",
+        "phase": "Fase 0",
+        "condition": "transponder_rov"
+      },
+      {
+        "packageId": "ABAN 006",
+        "phase": "Fase 0",
+        "condition": "transponder_cot"
+      },
+      {
+        "packageId": "POST_MOB_INJECT",
+        "phase": "Fase 0"
+      },
+      {
+        "packageId": "ABAN 227",
+        "phase": "Fase 2",
+        "condition": "fejat",
+        "isContingency": true,
+        "contingencyReason": "Contingência: limpeza do housing com FEJAT antes da descida do BOP"
+      },
+      {
+        "packageId": "ABAN 184",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 185",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "BOP_TEST_FETH_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 189",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "COP_CUT_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "CAUDA_INTER_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "PACKER_FISHING_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ISOLATION_INJECT",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 230",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 236",
+        "phase": "Fase 2"
+      },
+      {
+        "packageId": "ABAN 203",
+        "phase": "Fase 2"
+      }
+    ]
+  }
+}
