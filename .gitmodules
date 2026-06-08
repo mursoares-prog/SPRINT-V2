@@ -1,4 +1,0 @@
-[submodule "abandono-app"]
-	path = abandono-app
-	url = https://github.com/mursoares-prog/SPRINT.git
-	branch = testes
