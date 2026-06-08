@@ -59,3 +59,19 @@ class ChangeLogEntry(Base):
     depois: Mapped[str | None] = mapped_column(Text, nullable=True)
     author: Mapped[str | None] = mapped_column(String(100), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class LineOverride(Base):
+    """Edição (override) do texto de uma linha de pacote, sobre a base bundled.
+
+    Chave (pkg_id, line_index 0-based). A base servida = packageLines + overrides
+    aplicados ao campo `text`. Permite editar sem recompilar e reverter linha a linha.
+    """
+
+    __tablename__ = "line_override"
+
+    pkg_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    line_index: Mapped[int] = mapped_column(Integer, primary_key=True)
+    text: Mapped[str] = mapped_column(Text)
+    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)

@@ -36,6 +36,10 @@ uvicorn app.main:app --reload --port 8000
 | GET    | `/api/auth/me`         | Identidade do token (`Authorization: Bearer <token>`) |
 | GET    | `/api/changelog`       | Log de alterações (mais recentes primeiro) |
 | POST   | `/api/changelog`       | Acrescenta uma entrada (append-only, **requer editor**) |
+| GET    | `/api/base/package-lines` | Base das linhas mesclada (bundled + overrides) |
+| GET    | `/api/base/fields`     | Campos válidos para tokens `{{campo=glifo}}` |
+| PUT    | `/api/base/package-lines/{pkgId}/{idx}` | Edita o texto de uma linha (**editor**; valida tokens; registra no log) |
+| DELETE | `/api/base/package-lines/{pkgId}/{idx}` | Reverte a linha ao original (**editor**) |
 
 O POST/PUT de projetos também retorna um campo `validation` (informativo, nunca
 bloqueia o save) com a comparação entre o cronograma salvo e o recalculado dos inputs.
