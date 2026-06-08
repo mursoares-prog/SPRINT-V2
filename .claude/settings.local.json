@@ -116,7 +116,14 @@
       "PowerShell($pl = Get-Content \"C:\\\\Users\\\\murso\\\\Documents\\\\Teste 2\\\\abandono-app\\\\src\\\\data\\\\packageLines.json\" -Raw | ConvertFrom-Json; $k = $pl.PSObject.Properties.Name; \"Total packages: \" + $k.Count; \"\";\"--- ABAN 001 structure ---\"; $pl.'ABAN 001' | ConvertTo-Json -Depth 6 | Select-Object -First 1; \\($pl.'ABAN 001' | ConvertTo-Json -Depth 6\\))",
       "PowerShell($cl = Get-Content \"C:\\\\Users\\\\murso\\\\Documents\\\\Teste 2\\\\abandono-app\\\\src\\\\data\\\\changeLog.json\" -Raw | ConvertFrom-Json; \"type: \" + $cl.GetType\\(\\).Name; if\\($cl -is [Array]\\){ \"len \" + $cl.Count; \"first entries:\"; \\($cl | Select-Object -First 3 | ConvertTo-Json -Depth 5\\) } else { $cl.PSObject.Properties.Name; \\($cl | ConvertTo-Json -Depth 4 | Select-Object -First 60\\) })",
       "PowerShell($j = Get-Content \"C:\\\\Users\\\\murso\\\\Documents\\\\Teste 2\\\\abandono-app\\\\src\\\\data\\\\owOntology.json\" -Raw | ConvertFrom-Json; foreach\\($f in $j.PSObject.Properties.Name\\){ \"=== $f ===\"; $j.$f.PSObject.Properties.Name })",
-      "Bash(rm -rf C:/Users/murso/xlsxtmp2/engbuild)"
+      "Bash(rm -rf C:/Users/murso/xlsxtmp2/engbuild)",
+      "PowerShell(Get-History | Select-Object -Last 10; Write-Output \"---HISTORY FILE---\"; $h = \\(Get-PSReadlineOption\\).HistorySavePath; $h; if \\(Test-Path $h\\) { Get-Content $h -Tail 15 })",
+      "Bash(git diff *)",
+      "PowerShell($pwsh = Get-Command pwsh -ErrorAction SilentlyContinue; if \\($pwsh\\) { Write-Output \\(\"pwsh: \" + $pwsh.Source\\) } else { Write-Output \"pwsh NOT found\" })",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(grep -rn \"wireline_camisao\" src)",
+      "Bash(echo \"grep exit: $? \\(1 = none found, good\\)\")",
+      "Skill(fewer-permission-prompts)"
     ]
   }
 }
