@@ -73,10 +73,33 @@ python seed_auth.py joao senha123 editor  # adiciona/atualiza um usuário
 
 Sem backend acessível, o front cai no login legado offline (`teste/teste123`, papel viewer).
 
-## Deploy (depois)
+## Deploy (produção)
 
-A escolha do serviço gerenciado fica para a etapa de deploy. Basta apontar
-`DATABASE_URL` para o banco hospedado:
+Há um `Dockerfile` host-agnóstico (Railway / Render / Fly). O SQLite precisa de
+um **volume persistente** (senão o arquivo some a cada restart) — ou troque para
+Turso/Postgres via `DATABASE_URL`.
 
+### Variáveis de ambiente
+
+| Var | Obrigatória | Exemplo / default |
+|-----|-------------|-------------------|
+| `AUTH_SECRET` | **sim** | string aleatória longa (assina os tokens) |
+| `CORS_ORIGINS` | **sim** | `https://seu-app.vercel.app` (domínio do front) |
+| `DATABASE_URL` | não | `sqlite:////data/sprint_aban.db` (volume) — default é arquivo local |
+| `AUTH_USERS_FILE` | não | `/data/auth_users.json` (no volume, p/ persistir usuários) |
+
+### Runbook (com volume montado em `/data`)
+
+```bash
+# 1) Configure as env vars acima no provedor; monte um volume em /data.
+# 2) Após o 1º deploy, rode uma vez (console/shell do provedor):
+python seed_auth.py              # cria /data/auth_users.json (TROQUE as senhas!)
+python seed_changelog.py         # importa o histórico (app/data/change_log.json)
+# 3) No Vercel, defina VITE_API_URL = URL pública do backend e redeploy.
+```
+
+### Banco gerenciado (alternativa ao volume)
+
+Aponte `DATABASE_URL` para um SQLite/Postgres hospedado:
 - **Turso** (SQLite): `sqlite+libsql://<host>?authToken=...` (requer `sqlalchemy-libsql`)
 - **Neon/Postgres**: `postgresql+psycopg://user:pass@host/db` (requer `psycopg`)

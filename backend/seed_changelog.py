@@ -11,8 +11,10 @@ from sqlalchemy import func, select
 from app.database import Base, SessionLocal, engine
 from app.models import ChangeLogEntry
 
-# changeLog.json vive no frontend (repos no mesmo diretório pai).
-_SOURCE = Path(__file__).resolve().parent.parent / "abandono-app" / "src" / "data" / "changeLog.json"
+# Prefere a cópia local do backend (app/data, robusta em deploy standalone);
+# cai para o changeLog.json do frontend (dev, repos no mesmo diretório pai).
+_LOCAL = Path(__file__).resolve().parent / "app" / "data" / "change_log.json"
+_FRONT = Path(__file__).resolve().parent.parent / "abandono-app" / "src" / "data" / "changeLog.json"
 
 
 def main() -> None:
@@ -23,10 +25,11 @@ def main() -> None:
         if existing:
             print(f"change_log já tem {existing} entradas — nada a fazer.")
             return
-        if not _SOURCE.exists():
-            print(f"Fonte não encontrada: {_SOURCE}")
+        source = _LOCAL if _LOCAL.exists() else _FRONT
+        if not source.exists():
+            print(f"Fonte não encontrada: {_LOCAL} nem {_FRONT}")
             return
-        entries = json.loads(_SOURCE.read_text(encoding="utf-8-sig"))
+        entries = json.loads(source.read_text(encoding="utf-8-sig"))
         for e in entries:
             db.add(ChangeLogEntry(
                 id=e["id"], data=e["data"], pacote=e["pacote"], linha=e.get("linha"),
