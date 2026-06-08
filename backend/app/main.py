@@ -17,6 +17,9 @@ app = FastAPI(title="SPRINT ABAN API", version="0.1.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ORIGINS,
+    # Dev: aceita qualquer porta de localhost (Vite pode subir em 5173, 5174, ...).
+    # Em produção, restrinja via CORS_ORIGINS (e remova/ajuste o regex).
+    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
