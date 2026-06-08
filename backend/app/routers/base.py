@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from ..auth import require_editor
+from ..auth import require_admin
 from ..base_data import invalid_tokens, line_text, merged_package_lines, package_lines, valid_token_fields
 from ..database import get_db
 from ..models import ChangeLogEntry, LineOverride
@@ -65,8 +65,8 @@ def _check(pkg_id: str, index: int) -> str:
 
 @router.put("/package-lines/{pkg_id}/{line_index}")
 def edit_line(pkg_id: str, line_index: int, payload: LineEdit,
-              db: Session = Depends(get_db), user: dict = Depends(require_editor)):
-    """Salva o override do texto de uma linha (editor). Valida tokens e registra no log."""
+              db: Session = Depends(get_db), user: dict = Depends(require_admin)):
+    """Salva o override do texto de uma linha (admin). Valida tokens e registra no log."""
     _check(pkg_id, line_index)
     bad = invalid_tokens(payload.text)
     if bad:
@@ -92,7 +92,7 @@ def edit_line(pkg_id: str, line_index: int, payload: LineEdit,
 
 @router.delete("/package-lines/{pkg_id}/{line_index}")
 def reset_line(pkg_id: str, line_index: int,
-               db: Session = Depends(get_db), user: dict = Depends(require_editor)):
+               db: Session = Depends(get_db), user: dict = Depends(require_admin)):
     """Remove o override (reverte a linha ao texto original). Registra no log."""
     original = _check(pkg_id, line_index)
     existing = db.get(LineOverride, (pkg_id, line_index))

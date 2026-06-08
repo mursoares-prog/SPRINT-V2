@@ -1,10 +1,10 @@
 {
   "teste": {
     "passwordHash": "pbkdf2_sha256$200000$<salt_hex>$<hash_hex>",
-    "role": "editor"
+    "role": "admin"
   },
-  "viewer": {
+  "projetista": {
     "passwordHash": "pbkdf2_sha256$200000$<salt_hex>$<hash_hex>",
-    "role": "viewer"
+    "role": "projetista"
   }
 }

@@ -1,4 +1,4 @@
-"""Autenticação leve com papéis (editor/visualizador) — sem dependências externas.
+"""Autenticação leve com papéis (admin/projetista) — sem dependências externas.
 
 Usuários ficam num arquivo JSON (AUTH_USERS_FILE, default backend/auth_users.json),
 seeded por `seed_auth.py` (sem auto-cadastro). Senhas com PBKDF2-SHA256 (stdlib).
@@ -95,9 +95,9 @@ def current_user(authorization: str | None = Header(default=None)) -> dict | Non
     return parse_token(authorization[7:])
 
 
-def require_editor(user: dict | None = Depends(current_user)) -> dict:
+def require_admin(user: dict | None = Depends(current_user)) -> dict:
     if not user:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Autenticação necessária")
-    if user["role"] != "editor":
-        raise HTTPException(status.HTTP_403_FORBIDDEN, "Requer papel de editor")
+    if user["role"] != "admin":
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "Requer papel de admin")
     return user

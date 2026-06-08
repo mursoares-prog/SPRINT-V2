@@ -11,7 +11,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 Copy-Item .env.example .env   # ajuste se necessário
-python seed_auth.py           # cria auth_users.json (teste/teste123 editor, viewer/viewer123)
+python seed_auth.py           # cria auth_users.json (teste/teste123 admin, projetista/projetista123)
 python seed_changelog.py      # importa o historico do changeLog.json para o banco (1x)
 uvicorn app.main:app --reload --port 8000
 ```
@@ -35,11 +35,11 @@ uvicorn app.main:app --reload --port 8000
 | POST   | `/api/auth/login`      | Login `{username, password}` → `{token, role, username}` |
 | GET    | `/api/auth/me`         | Identidade do token (`Authorization: Bearer <token>`) |
 | GET    | `/api/changelog`       | Log de alterações (mais recentes primeiro) |
-| POST   | `/api/changelog`       | Acrescenta uma entrada (append-only, **requer editor**) |
+| POST   | `/api/changelog`       | Acrescenta uma entrada (append-only, **requer admin**) |
 | GET    | `/api/base/package-lines` | Base das linhas mesclada (bundled + overrides) |
 | GET    | `/api/base/fields`     | Campos válidos para tokens `{{campo=glifo}}` |
-| PUT    | `/api/base/package-lines/{pkgId}/{idx}` | Edita o texto de uma linha (**editor**; valida tokens; registra no log) |
-| DELETE | `/api/base/package-lines/{pkgId}/{idx}` | Reverte a linha ao original (**editor**) |
+| PUT    | `/api/base/package-lines/{pkgId}/{idx}` | Edita o texto de uma linha (**admin**; valida tokens; registra no log) |
+| DELETE | `/api/base/package-lines/{pkgId}/{idx}` | Reverte a linha ao original (**admin**) |
 
 O POST/PUT de projetos também retorna um campo `validation` (informativo, nunca
 bloqueia o save) com a comparação entre o cronograma salvo e o recalculado dos inputs.
@@ -63,15 +63,15 @@ backend/
 ## Autenticação e papéis
 
 Usuários ficam em `auth_users.json` (gitignored; veja `auth_users.example.json`),
-com papel `editor` (pode editar a base) ou `viewer` (só leitura). Senhas em
+com papel `admin` (pode editar a base) ou `projetista` (só leitura). Senhas em
 PBKDF2-SHA256; token de sessão assinado com HMAC (sem dependências externas).
 
 ```powershell
 python seed_auth.py                       # cria os usuários padrão
-python seed_auth.py joao senha123 editor  # adiciona/atualiza um usuário
+python seed_auth.py joao senha123 admin  # adiciona/atualiza um usuário
 ```
 
-Sem backend acessível, o front cai no login legado offline (`teste/teste123`, papel viewer).
+Sem backend acessível, o front cai no login legado offline (`teste/teste123`, papel projetista).
 
 ## Deploy (produção)
 

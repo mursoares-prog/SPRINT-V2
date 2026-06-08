@@ -1,4 +1,4 @@
-"""Testes do changeLog server-side (GET, POST editor-gated, autoria, ordenação)."""
+"""Testes do changeLog server-side (GET, POST admin-gated, autoria, ordenação)."""
 import json
 
 import pytest
@@ -29,8 +29,8 @@ def client(tmp_path, monkeypatch):
     db.commit()
     db.close()
 
-    users = {"ed": {"passwordHash": hash_password("p"), "role": "editor"},
-             "vw": {"passwordHash": hash_password("p"), "role": "viewer"}}
+    users = {"ed": {"passwordHash": hash_password("p"), "role": "admin"},
+             "vw": {"passwordHash": hash_password("p"), "role": "projetista"}}
     uf = tmp_path / "users.json"
     uf.write_text(json.dumps(users), encoding="utf-8")
     monkeypatch.setenv("AUTH_USERS_FILE", str(uf))
@@ -60,7 +60,7 @@ def test_list_newest_first(client):
     assert [e["id"] for e in rows] == [2, 1]  # mais recente primeiro
 
 
-def test_editor_can_append(client):
+def test_admin_can_append(client):
     token = _token(client, "ed")
     r = client.post("/api/changelog", headers={"Authorization": f"Bearer {token}"},
                     json={"pacote": "ABAN 045", "linha": 5, "tipo": "edição", "resumo": "nova", "antes": "a", "depois": "b"})
@@ -71,7 +71,7 @@ def test_editor_can_append(client):
     assert client.get("/api/changelog").json()[0]["id"] == 3
 
 
-def test_viewer_cannot_append(client):
+def test_projetista_cannot_append(client):
     token = _token(client, "vw")
     r = client.post("/api/changelog", headers={"Authorization": f"Bearer {token}"},
                     json={"pacote": "X", "tipo": "edição", "resumo": "x"})

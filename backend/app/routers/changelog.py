@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from ..auth import require_editor
+from ..auth import require_admin
 from ..database import get_db
 from ..models import ChangeLogEntry
 
@@ -50,8 +50,8 @@ def list_changelog(db: Session = Depends(get_db)):
 
 
 @router.post("", response_model=ChangeLogOut, status_code=status.HTTP_201_CREATED)
-def add_changelog(payload: ChangeLogIn, db: Session = Depends(get_db), user: dict = Depends(require_editor)):
-    """Acrescenta uma entrada (append-only). Requer papel editor; grava o autor do token."""
+def add_changelog(payload: ChangeLogIn, db: Session = Depends(get_db), user: dict = Depends(require_admin)):
+    """Acrescenta uma entrada (append-only). Requer papel admin; grava o autor do token."""
     next_id = (db.execute(select(func.max(ChangeLogEntry.id))).scalar() or 0) + 1
     entry = ChangeLogEntry(
         id=next_id,

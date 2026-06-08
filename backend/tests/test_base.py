@@ -29,8 +29,8 @@ def client(tmp_path, monkeypatch):
     TestSession = sessionmaker(bind=engine, autoflush=False, autocommit=False)
     Base.metadata.create_all(bind=engine)
 
-    users = {"ed": {"passwordHash": hash_password("p"), "role": "editor"},
-             "vw": {"passwordHash": hash_password("p"), "role": "viewer"}}
+    users = {"ed": {"passwordHash": hash_password("p"), "role": "admin"},
+             "vw": {"passwordHash": hash_password("p"), "role": "projetista"}}
     uf = tmp_path / "users.json"
     uf.write_text(json.dumps(users), encoding="utf-8")
     monkeypatch.setenv("AUTH_USERS_FILE", str(uf))
@@ -73,7 +73,7 @@ def test_get_fields(client):
     assert "prof" in fields  # PLAN_KEY
 
 
-def test_editor_edits_line_and_logs(client):
+def test_admin_edits_line_and_logs(client):
     new_text = ORIG + " {{prof=XXX}}"  # token valido (prof e' PLAN_KEY)
     r = client.put(f"/api/base/package-lines/{PKG}/{IDX}", json={"text": new_text}, headers=_hdr(client, "ed"))
     assert r.status_code == 200 and r.json()["text"] == new_text
@@ -91,7 +91,7 @@ def test_reject_invalid_token(client):
     assert "zzznaoexiste" in r.json()["detail"]
 
 
-def test_viewer_cannot_edit(client):
+def test_projetista_cannot_edit(client):
     r = client.put(f"/api/base/package-lines/{PKG}/{IDX}", json={"text": ORIG + " x"}, headers=_hdr(client, "vw"))
     assert r.status_code == 403
 

@@ -2,7 +2,7 @@
 
 Uso:
   python seed_auth.py                      # cria defaults se o arquivo não existir
-  python seed_auth.py <usuario> <senha> <editor|viewer>   # adiciona/atualiza um usuário
+  python seed_auth.py <usuario> <senha> <admin|projetista>   # adiciona/atualiza um usuário
 
 Rodar a partir da pasta backend/ (com a venv ativa).
 """
@@ -13,8 +13,8 @@ from pathlib import Path
 from app.auth import hash_password, users_path
 
 DEFAULTS = [
-    ("teste", "teste123", "editor"),    # continuidade do login atual + papel editor
-    ("viewer", "viewer123", "viewer"),  # exemplo de visualizador
+    ("teste", "teste123", "admin"),            # continuidade do login atual + papel admin
+    ("projetista", "projetista123", "projetista"),  # exemplo de projetista
 ]
 
 
@@ -24,8 +24,8 @@ def main() -> None:
 
     if len(sys.argv) == 4:
         username, password, role = sys.argv[1], sys.argv[2], sys.argv[3]
-        if role not in ("editor", "viewer"):
-            sys.exit("papel deve ser 'editor' ou 'viewer'")
+        if role not in ("admin", "projetista"):
+            sys.exit("papel deve ser 'admin' ou 'projetista'")
         users[username] = {"passwordHash": hash_password(password), "role": role}
         print(f"Usuário '{username}' ({role}) gravado.")
     elif not users:
