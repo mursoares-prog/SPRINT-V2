@@ -10,3 +10,6 @@ __pycache__/
 
 # Ambiente
 .env
+
+# Usuários/credenciais locais (commitar só o .example)
+auth_users.json
