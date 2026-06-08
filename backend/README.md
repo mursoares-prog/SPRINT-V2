@@ -12,6 +12,7 @@ python -m venv .venv
 pip install -r requirements.txt
 Copy-Item .env.example .env   # ajuste se necessário
 python seed_auth.py           # cria auth_users.json (teste/teste123 editor, viewer/viewer123)
+python seed_changelog.py      # importa o historico do changeLog.json para o banco (1x)
 uvicorn app.main:app --reload --port 8000
 ```
 
@@ -33,6 +34,8 @@ uvicorn app.main:app --reload --port 8000
 | POST   | `/api/schedule/validate` | Compara `{inputs, schedule}` com o cronograma recalculado e reporta divergências |
 | POST   | `/api/auth/login`      | Login `{username, password}` → `{token, role, username}` |
 | GET    | `/api/auth/me`         | Identidade do token (`Authorization: Bearer <token>`) |
+| GET    | `/api/changelog`       | Log de alterações (mais recentes primeiro) |
+| POST   | `/api/changelog`       | Acrescenta uma entrada (append-only, **requer editor**) |
 
 O POST/PUT de projetos também retorna um campo `validation` (informativo, nunca
 bloqueia o save) com a comparação entre o cronograma salvo e o recalculado dos inputs.

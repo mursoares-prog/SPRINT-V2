@@ -4,7 +4,7 @@ from __future__ import annotations
 import uuid
 from datetime import datetime, timezone
 
-from sqlalchemy import JSON, DateTime, String, Text
+from sqlalchemy import JSON, DateTime, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from .database import Base
@@ -38,3 +38,24 @@ class Project(Base):
     )
     # Documento completo do projeto (inputs, schedule, projectData, fineTuningItems...).
     data: Mapped[dict] = mapped_column(JSON, default=dict)
+
+
+class ChangeLogEntry(Base):
+    """Registro auditável de alterações na base das linhas dos pacotes.
+
+    Espelha o LogEntry do front (changeLog.json), com `author` (quem editou,
+    do token) e `created_at`. Vira a fonte da verdade do log (a aba Log do Admin).
+    """
+
+    __tablename__ = "change_log"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    data: Mapped[str] = mapped_column(String(10))   # ISO yyyy-mm-dd
+    pacote: Mapped[str] = mapped_column(String(50), index=True)
+    linha: Mapped[int | None] = mapped_column(Integer, nullable=True)  # posição 1-based; null se N/A
+    tipo: Mapped[str] = mapped_column(String(30))
+    resumo: Mapped[str] = mapped_column(Text)
+    antes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    depois: Mapped[str | None] = mapped_column(Text, nullable=True)
+    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
