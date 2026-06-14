@@ -4,7 +4,7 @@ from __future__ import annotations
 import uuid
 from datetime import datetime, timezone
 
-from sqlalchemy import JSON, DateTime, Integer, String, Text
+from sqlalchemy import JSON, DateTime, Float, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from .database import Base
@@ -62,10 +62,15 @@ class ChangeLogEntry(Base):
 
 
 class LineOverride(Base):
-    """Edição (override) do texto de uma linha de pacote, sobre a base bundled.
+    """Edição (override) de uma linha de pacote, sobre a base bundled.
 
     Chave (pkg_id, line_index 0-based). A base servida = packageLines + overrides
-    aplicados ao campo `text`. Permite editar sem recompilar e reverter linha a linha.
+    aplicados. `text` (texto/placeholders), `duration` (horas) e os 4 campos da
+    ontologia OpenWells pertencem a package_lines e são mesclados pelo backend.
+    `rec`/`pad` (recomendações/padrões) não existem na base do backend — são
+    devolvidos via /overrides e mesclados no front sobre packageLineDetails.json.
+    Campos None = "não sobrescreve este campo". Permite editar sem recompilar e
+    reverter a linha inteira.
     """
 
     __tablename__ = "line_override"
@@ -73,5 +78,52 @@ class LineOverride(Base):
     pkg_id: Mapped[str] = mapped_column(String(50), primary_key=True)
     line_index: Mapped[int] = mapped_column(Integer, primary_key=True)
     text: Mapped[str] = mapped_column(Text)
+    duration: Mapped[float | None] = mapped_column(Float, nullable=True)
+    rec: Mapped[str | None] = mapped_column(Text, nullable=True)
+    pad: Mapped[str | None] = mapped_column(Text, nullable=True)
+    ow_fase: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    ow_atividade: Mapped[str | None] = mapped_column(String(150), nullable=True)
+    ow_operacao: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    ow_etapa: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
+
+
+class PackageLinesOverride(Base):
+    """Override do conjunto COMPLETO de linhas de um pacote (estrutural).
+
+    Chave `pkg_id`. `lines` é o array inteiro de linhas — cada linha autocontida
+    com os 12 campos de package_lines (text, duration, bop, compensando,
+    isContingency, isParallel, owFase/owAtividade/owOperacao/owEtapa, genOperacao,
+    genOperacaoDual) MAIS `rec`/`pad` (detalhes). Permite adicionar/excluir/
+    reordenar linhas (o que o LineOverride por índice não cobre). O front monta o
+    array (tem os bundles de linhas e detalhes); o backend só o armazena.
+
+    Precedência no merge: PackageLinesOverride > LineOverride (legado) > bundle.
+    Também é a fonte das linhas de pacotes CUSTOMIZADOS (que não existem no bundle).
+    """
+
+    __tablename__ = "package_lines_override"
+
+    pkg_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    lines: Mapped[list] = mapped_column(JSON, default=list)
+    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
+
+
+class PackageMeta(Base):
+    """Metadados de um pacote CUSTOMIZADO (criado/duplicado no Admin).
+
+    Só existe para pacotes fora do bundle (os do bundle têm nome travado e não
+    aparecem aqui). As linhas do pacote ficam em PackageLinesOverride. Apagar o
+    customizado = remover esta linha + o PackageLinesOverride correspondente.
+    """
+
+    __tablename__ = "package_meta"
+
+    pkg_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    name: Mapped[str] = mapped_column(Text)
+    category: Mapped[str] = mapped_column(String(100), default="")
+    technology: Mapped[str] = mapped_column(String(30), default="none")
     author: Mapped[str | None] = mapped_column(String(100), nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)

@@ -111,3 +111,109 @@ def test_reset_reverts(client):
 def test_unknown_package_404(client):
     r = client.put("/api/base/package-lines/NAO_EXISTE/0", json={"text": "x"}, headers=_hdr(client, "ed"))
     assert r.status_code == 404
+
+
+def test_edit_duration_and_ontology_merges(client):
+    patch = {"duration": 3.5, "owFase": "AP. 1A", "owAtividade": "X", "owOperacao": "Y", "owEtapa": "Z"}
+    r = client.put(f"/api/base/package-lines/{PKG}/{IDX}", json=patch, headers=_hdr(client, "ed"))
+    assert r.status_code == 200
+    merged = client.get("/api/base/package-lines").json()[PKG][IDX]
+    assert merged["duration"] == 3.5
+    assert merged["owFase"] == "AP. 1A" and merged["owEtapa"] == "Z"
+    # texto preservado (patch parcial não tocou no texto)
+    assert merged["text"] == ORIG
+
+
+def test_rec_pad_only_in_overrides_not_in_package_lines(client):
+    r = client.put(f"/api/base/package-lines/{PKG}/{IDX}",
+                   json={"rec": "Recomendo X", "pad": "NORMA-123"}, headers=_hdr(client, "ed"))
+    assert r.status_code == 200
+    ov = next(o for o in client.get("/api/base/overrides").json()
+              if o["pkgId"] == PKG and o["lineIndex"] == IDX)
+    assert ov["rec"] == "Recomendo X" and ov["pad"] == "NORMA-123"
+    # rec/pad não pertencem a package_lines (mesclados no front sobre os detalhes)
+    assert "rec" not in client.get("/api/base/package-lines").json()[PKG][IDX]
+
+
+def test_noop_patch_is_unchanged(client):
+    client.put(f"/api/base/package-lines/{PKG}/{IDX}", json={"duration": 7.0}, headers=_hdr(client, "ed"))
+    r = client.put(f"/api/base/package-lines/{PKG}/{IDX}", json={"duration": 7.0}, headers=_hdr(client, "ed"))
+    assert r.status_code == 200 and r.json().get("unchanged") is True
+
+
+# ── Edição estrutural por pacote (linhas completas) ────────────────────────────
+
+def _line(text, **kw):
+    base = {"text": text, "duration": 0, "bop": None, "compensando": None,
+            "isContingency": None, "isParallel": None, "owFase": "AP. 0",
+            "owAtividade": "", "owOperacao": "", "owEtapa": "",
+            "genOperacao": None, "genOperacaoDual": None, "rec": "", "pad": ""}
+    base.update(kw)
+    return base
+
+
+def test_save_package_lines_add_delete_reorder(client):
+    lines = [_line("Linha A", duration=1.5, rec="Rec A", pad="Pad A"),
+             _line("Linha B nova", duration=2.0)]
+    r = client.put(f"/api/base/packages/{PKG}/lines", json={"lines": lines}, headers=_hdr(client, "ed"))
+    assert r.status_code == 200
+    merged = client.get("/api/base/package-lines").json()[PKG]
+    assert len(merged) == 2
+    assert merged[0]["text"] == "Linha A" and merged[0]["duration"] == 1.5
+    assert merged[1]["text"] == "Linha B nova"
+    # rec/pad NÃO entram em package-lines (são detalhes, mesclados no front)
+    assert "rec" not in merged[0]
+    # ... mas voltam pelo /package-overrides
+    ov = next(o for o in client.get("/api/base/package-overrides").json() if o["pkgId"] == PKG)
+    assert ov["lines"][0]["rec"] == "Rec A" and ov["lines"][0]["pad"] == "Pad A"
+
+
+def test_package_override_takes_precedence_over_line_override(client):
+    client.put(f"/api/base/package-lines/{PKG}/{IDX}", json={"text": ORIG + " X"}, headers=_hdr(client, "ed"))
+    client.put(f"/api/base/packages/{PKG}/lines", json={"lines": [_line("Só esta")]}, headers=_hdr(client, "ed"))
+    merged = client.get("/api/base/package-lines").json()[PKG]
+    assert len(merged) == 1 and merged[0]["text"] == "Só esta"
+
+
+def test_reset_package_lines_reverts_bundle(client):
+    n_orig = len(client.get("/api/base/package-lines").json()[PKG])
+    client.put(f"/api/base/packages/{PKG}/lines", json={"lines": [_line("x")]}, headers=_hdr(client, "ed"))
+    r = client.delete(f"/api/base/packages/{PKG}/lines", headers=_hdr(client, "ed"))
+    assert r.status_code == 200 and r.json()["reverted"] is True
+    assert len(client.get("/api/base/package-lines").json()[PKG]) == n_orig
+
+
+def test_save_package_rejects_invalid_token(client):
+    r = client.put(f"/api/base/packages/{PKG}/lines",
+                   json={"lines": [_line("oi {{zzznaoexiste=XXX}}")]}, headers=_hdr(client, "ed"))
+    assert r.status_code == 400 and "zzznaoexiste" in r.json()["detail"]
+
+
+def test_create_duplicate_edit_delete_custom_package(client):
+    # cria
+    r = client.post("/api/base/packages",
+                    json={"name": "Meu pacote", "category": "Custom", "technology": "wireline",
+                          "lines": [_line("Linha custom")]}, headers=_hdr(client, "ed"))
+    assert r.status_code == 200
+    pid = r.json()["pkgId"]
+    assert pid.startswith("ABAN")
+    # aparece em /packages e nas linhas mescladas
+    assert any(m["pkgId"] == pid for m in client.get("/api/base/packages").json())
+    assert client.get("/api/base/package-lines").json()[pid][0]["text"] == "Linha custom"
+    # edita meta
+    r = client.patch(f"/api/base/packages/{pid}", json={"name": "Renomeado"}, headers=_hdr(client, "ed"))
+    assert r.status_code == 200 and r.json()["name"] == "Renomeado"
+    # apaga
+    r = client.delete(f"/api/base/packages/{pid}", headers=_hdr(client, "ed"))
+    assert r.status_code == 200 and r.json()["deleted"] is True
+    assert pid not in client.get("/api/base/package-lines").json()
+
+
+def test_bundle_package_meta_locked_and_undeletable(client):
+    assert client.patch(f"/api/base/packages/{PKG}", json={"name": "x"}, headers=_hdr(client, "ed")).status_code == 400
+    assert client.delete(f"/api/base/packages/{PKG}", headers=_hdr(client, "ed")).status_code == 400
+
+
+def test_custom_package_endpoints_require_admin(client):
+    assert client.post("/api/base/packages", json={"name": "x"}, headers=_hdr(client, "vw")).status_code == 403
+    assert client.put(f"/api/base/packages/{PKG}/lines", json={"lines": []}).status_code == 401

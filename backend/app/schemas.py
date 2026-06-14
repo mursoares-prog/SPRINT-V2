@@ -1,10 +1,10 @@
 """Schemas Pydantic de entrada/saída da API."""
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_serializer
 
 
 class ProjectIn(BaseModel):
@@ -30,6 +30,12 @@ class ProjectSummary(BaseModel):
     scopeId: str
     savedAt: datetime
     updatedAt: datetime
+
+    @field_serializer('savedAt', 'updatedAt')
+    def _serialize_dt(self, dt: datetime) -> str:
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.isoformat().replace('+00:00', 'Z')
 
 
 class ProjectOut(BaseModel):

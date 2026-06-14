@@ -35,16 +35,62 @@ def line_text(pkg_id: str, index: int) -> str | None:
     return lines[index].get("text", "")
 
 
-def merged_package_lines(overrides: dict[tuple[str, int], str]) -> dict:
-    """Base + overrides aplicados ao campo text (cópia rasa por linha alterada)."""
-    if not overrides:
+# Campos do LineOverride legado (chave) → chave em package_lines (valor).
+# rec/pad NÃO entram: pertencem aos detalhes (packageLineDetails), mesclados no front.
+_MERGED_FIELDS = {
+    "text": "text",
+    "duration": "duration",
+    "ow_fase": "owFase",
+    "ow_atividade": "owAtividade",
+    "ow_operacao": "owOperacao",
+    "ow_etapa": "owEtapa",
+}
+
+# Campos de package_lines (12) — usados ao projetar o array completo de um
+# PackageLinesOverride (descarta rec/pad, que viram detalhes no front).
+PACKAGE_LINE_FIELDS = (
+    "text", "duration", "bop", "compensando", "isContingency", "isParallel",
+    "owFase", "owAtividade", "owOperacao", "owEtapa", "genOperacao", "genOperacaoDual",
+)
+
+
+def _project_package_line(ln: dict) -> dict:
+    """Mantém só os 12 campos de package_lines de uma linha do PackageLinesOverride."""
+    return {k: ln.get(k) for k in PACKAGE_LINE_FIELDS}
+
+
+def merged_package_lines(
+    line_overrides: dict[tuple[str, int], dict] | None = None,
+    pkg_overrides: dict[str, list[dict]] | None = None,
+) -> dict:
+    """Base bundled + overrides aplicados. Precedência por pacote:
+
+    1. `pkg_overrides[pkg]` (array completo) — usado inteiro (estrutural; cobre
+       add/del/reorder e pacotes customizados que não existem no bundle);
+    2. `line_overrides` por (pkg, índice) — patch campo-a-campo (legado);
+    3. bundle.
+    """
+    line_overrides = line_overrides or {}
+    pkg_overrides = pkg_overrides or {}
+    if not line_overrides and not pkg_overrides:
         return package_lines()
+
+    bundle = package_lines()
     out: dict = {}
-    for pkg_id, lines in package_lines().items():
+    # União: pacotes do bundle + customizados (só em pkg_overrides).
+    for pkg_id in list(bundle.keys()) + [p for p in pkg_overrides if p not in bundle]:
+        if pkg_id in pkg_overrides:
+            out[pkg_id] = [_project_package_line(ln) for ln in pkg_overrides[pkg_id]]
+            continue
         new_lines = []
-        for i, ln in enumerate(lines):
-            ov = overrides.get((pkg_id, i))
-            new_lines.append({**ln, "text": ov} if ov is not None else ln)
+        for i, ln in enumerate(bundle.get(pkg_id, [])):
+            ov = line_overrides.get((pkg_id, i))
+            if ov is None:
+                new_lines.append(ln)
+                continue
+            patch = {dst: ov[src] for src, dst in _MERGED_FIELDS.items()
+                     if ov.get(src) is not None}
+            new_lines.append({**ln, **patch})
         out[pkg_id] = new_lines
     return out
 
