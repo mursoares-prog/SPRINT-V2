@@ -85,7 +85,7 @@ def get_dismount_package(tech, rig_type, op_type, mode):
             return None
         return "ABAN 242" if op_type == "LWO" else "ABAN 243"
     if tech == "ct":
-        return "ABAN 240" if op_type == "LWO" else "ABAN 241"
+        return "ABAN 148" if op_type == "LWO" else "ABAN 161"
     return None
 
 
@@ -239,10 +239,10 @@ def generate_schedule(inputs: dict) -> list[dict]:
                     elif anc_tcap_by_rov:
                         add_item(items, "ABAN 015", sphase)
             elif rig_type == "DP" and not has_workstring_tcap:
-                add_item(items, "NOVO 015", sphase)
+                add_item(items, "ABAN 246", sphase)
                 add_item(items, "ABAN 014", sphase)
             elif anc_tcap_by_rov:
-                add_item(items, "NOVO 016", sphase)
+                add_item(items, "ABAN 247", sphase)
                 add_item(items, "ABAN 015", sphase)
             continue
 
@@ -279,7 +279,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
             if inputs.get("tcapRemovalMethod") == "rov":
                 continue
             if "tree_cap" in equipments:
-                add_item(items, "NOVO 014" if rig_type == "ANC" else "NOVO 013", sphase)
+                add_item(items, "ABAN 245" if rig_type == "ANC" else "ABAN 244", sphase)
                 add_item(items, "ABAN 018", sphase)
                 add_item(items, "ABAN 019", sphase)
 
@@ -297,7 +297,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
                     if operation_type == "LWO":
                         add_item(items, "ABAN 206", sphase)
                     else:
-                        add_item(items, "NOVO 016" if rig_type == "ANC" else "NOVO 015", sphase)
+                        add_item(items, "ABAN 247" if rig_type == "ANC" else "ABAN 246", sphase)
                     add_item(items, "ABAN 015" if rig_type == "ANC" else "ABAN 014", sphase)
                     surf_fluid = _c(inputs.get("tcapSurfaceFluid"), "n2")
                     if surf_fluid == "n2":
@@ -310,7 +310,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
                     if operation_type == "LWO":
                         add_item(items, "ABAN 206", sphase)
                     else:
-                        add_item(items, "NOVO 016" if rig_type == "ANC" else "NOVO 015", sphase)
+                        add_item(items, "ABAN 247" if rig_type == "ANC" else "ABAN 246", sphase)
                     add_item(items, "ABAN 015" if rig_type == "ANC" else "ABAN 014", sphase)
                     if not inputs.get("riserFluid") or inputs.get("riserFluid") == "n2":
                         add_item(items, "ABAN 017" if rig_type == "ANC" else "ABAN 016", sphase)
@@ -341,7 +341,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
                         add_item(items, (("ABAN 176" if has_brv else "ABAN 172") if rig_type == "ANC" else ("ABAN 174" if has_brv else "ABAN 168")), sphase,
                                  {"isContingency": fl_conting, "contingencyReason": "Contingência: dissociação de hidrato na flowline de gas lift" if fl_conting else None})
             if method == "n2_lift":
-                add_item(items, "ABAN 239", sphase)
+                add_item(items, "ABAN 254", sphase)
             else:
                 if "flpo" in lines:
                     add_item(items, "ABAN 066", sphase)
@@ -357,7 +357,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
                 continue
             if rig_type == "ANC":
                 if operation_type != "LWO":
-                    add_item(items, "NOVO 016", sphase)
+                    add_item(items, "ABAN 247", sphase)
                 add_item(items, "ABAN 015", sphase)
             if not inputs.get("riserFluid") or inputs.get("riserFluid") == "n2":
                 add_item(items, "ABAN 017" if rig_type == "ANC" else "ABAN 016", sphase)
@@ -407,9 +407,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
         # ─── PERF_INJECT ─────────────────────────────────────────────
         if pkg_marker == "PERF_INJECT":
             eff = "through_casing" if bop_active else base_mode
-            amort_pkg = ("NOVO 006" if inputs.get("amortAnularFluid") == "diesel"
-                         else "NOVO 005" if inputs.get("amortAnularFluid") == "inhibited"
-                         else "NOVO 003")
+            amort_pkg = "ABAN 255"  # amortecimento de Anular A pos-canhoneio (bullheading FCBA) - consolidado
             if uses_fs1_barrier:
                 if not rcma_fluid_csb and _c(inputs.get("fs1PerfProfunda"), "yes") == "yes":
                     method = _c(inputs.get("tubingPerfMethod"), "electric")
@@ -948,7 +946,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
             camisao_arr = [v for v in _c(inputs.get("installCamisao"), []) if v != "no"]
             effective_mode_now = "through_casing" if bop_active else base_mode
             if inputs.get("gaugeTech") != "no" and inputs.get("gaugeCamisaoAcoplado"):
-                add_item(items, "NOVO 021", sphase, {"isContingency": inputs.get("gaugeContingency") is True})
+                add_item(items, "ABAN 036", sphase, {"isContingency": inputs.get("gaugeContingency") is True})
             for slot in ("yes", "contingency"):
                 if slot not in camisao_arr:
                     continue
@@ -999,7 +997,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
 
                 if _yes_or_conting(inputs.get("installTmfPlugEndProd")):
                     ensure_wireline()
-                    add_item(items, "NOVO 001", sphase, {"isContingency": _is_conting(inputs.get("installTmfPlugEndProd"))})
+                    add_item(items, "ABAN 249", sphase, {"isContingency": _is_conting(inputs.get("installTmfPlugEndProd"))})
                 if rig_type == "DP" and _yes_or_conting(inputs.get("installTmfPlugEndAnul")):
                     conting = _is_conting(inputs.get("installTmfPlugEndAnul"))
                     if current_tech != "none":
@@ -1009,13 +1007,13 @@ def generate_schedule(inputs: dict) -> list[dict]:
                         current_tech = "none"
                     add_item(items, "ABAN 213", sphase, {"isContingency": conting})
                     ensure_wireline()
-                    add_item(items, "NOVO 002", sphase, {"isContingency": conting})
+                    add_item(items, "ABAN 250", sphase, {"isContingency": conting})
                     has_prod_plug = _yes_or_conting(inputs.get("installTmfPlugEndProd"))
                     add_item(items, "ABAN 026" if has_prod_plug else "ABAN 024", sphase, {"isContingency": conting})
                     add_item(items, "ABAN 027", sphase, {"isContingency": conting})
                 elif rig_type != "DP" and _yes_or_conting(inputs.get("installTmfPlugEndAnul")):
                     ensure_wireline()
-                    add_item(items, "NOVO 002", sphase, {"isContingency": _is_conting(inputs.get("installTmfPlugEndAnul"))})
+                    add_item(items, "ABAN 250", sphase, {"isContingency": _is_conting(inputs.get("installTmfPlugEndAnul"))})
             continue
 
         # ─── TAIL_FISHING_INJECT ─────────────────────────────────────
@@ -1069,7 +1067,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
             if is_fs2_non_rcma and inputs.get("bopTestMethod") == "feth_on_th":
                 pass
             elif is_fs2_non_rcma and inputs.get("bopTestMethod") == "ponteira_orman":
-                add_item(items, "NOVO 011", sphase)
+                add_item(items, "ABAN 240", sphase)
             elif is_fs2_non_rcma and inputs.get("bopTestMethod") == "coluna_flutuada":
                 add_item(items, "ABAN 229", sphase)
             else:
@@ -1080,7 +1078,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
         if pkg_marker == "BOP_TEST_FETH_INJECT":
             is_fs2_non_rcma = (inputs.get("scopeId") or "").startswith("FS2") and inputs.get("scopeId") != "FS2_Conv_RCMA"
             if is_fs2_non_rcma and inputs.get("bopTestMethod") == "feth_on_th":
-                add_item(items, "NOVO 012", sphase)
+                add_item(items, "ABAN 241", sphase)
             continue
 
         # ─── COP_CUT_INJECT ──────────────────────────────────────────
@@ -1090,7 +1088,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
                 cut_opts = {"isContingency": is_contig, "contingencyReason": "Contingência: corte de COP/COI após falha de desassentamento do TH" if is_contig else None}
                 is_rcma = scope_id == "FS2_Conv_RCMA"
                 if is_rcma:
-                    add_item(items, "NOVO 010", sphase, cut_opts)
+                    add_item(items, "ABAN 252", sphase, cut_opts)
                     add_item(items, "ABAN 183", sphase, cut_opts)
                     add_item(items, "ABAN 188", sphase, cut_opts)
                 else:
@@ -1101,11 +1099,11 @@ def generate_schedule(inputs: dict) -> list[dict]:
                             **cut_opts,
                             **({"isContingency": True, "contingencyReason": "Contingência: retirada de plug 3,75\" no TH antes do free point"} if is_plug_conting else {}),
                         })
-                    add_item(items, "NOVO 009", sphase, cut_opts)
+                    add_item(items, "ABAN 251", sphase, cut_opts)
                     if inputs.get("fs2CopCutMethod") == "ct":
                         add_item(items, "ABAN 121" if rig_type == "ANC" else "ABAN 119", sphase, cut_opts)
                         add_item(items, "ABAN 150", sphase, cut_opts)
-                        add_item(items, "ABAN 240" if operation_type == "LWO" else "ABAN 241", sphase, cut_opts)
+                        add_item(items, "ABAN 148" if operation_type == "LWO" else "ABAN 161", sphase, cut_opts)
                     elif inputs.get("fs2CopCutMethod") == "slip_shot":
                         add_item(items, "ABAN 115", sphase, cut_opts)
                     elif inputs.get("fs2CopCutMethod") == "string_shot":
@@ -1147,7 +1145,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
                 elif log == "imageamento":
                     pkg_id = "ABAN 112"
                 elif log == "free_point":
-                    pkg_id = "NOVO 009"
+                    pkg_id = "ABAN 251"
                 if pkg_id:
                     add_item(items, pkg_id, sphase, {"isContingency": is_conting_log})
             continue
@@ -1182,10 +1180,10 @@ def generate_schedule(inputs: dict) -> list[dict]:
             if effective_pkg_id == "ABAN 029" and "annular" in tmf_bores:
                 continue
 
-        if (effective_pkg_id in ("NOVO 017", "NOVO 018")
+        if (effective_pkg_id == "ABAN 211"
                 and (not "tree_cap" in equipments or inputs.get("tcapRemovalMethod") == "rov")):
             continue
-        if (effective_pkg_id in ("NOVO 019", "NOVO 020")
+        if (effective_pkg_id == "ABAN 212"
                 and "tree_cap" in equipments and inputs.get("tcapRemovalMethod") != "rov"):
             continue
         if (effective_pkg_id in ("ABAN 011", "ABAN 012")

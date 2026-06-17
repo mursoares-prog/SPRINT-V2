@@ -145,26 +145,14 @@
       "LWO"
     ]
   },
-  "NOVO 017": {
-    "id": "NOVO 017",
-    "name": "Preparação do Conjunto de WO com DPR/HCR para retirada/fundeio da TCap",
+  "ABAN 211": {
+    "id": "ABAN 211",
+    "name": "Preparação do Conjunto de WO + TRT para retirada/fundeio da TCap",
     "category": "Fase 0",
     "technology": "none",
     "applicableRig": [
+      "ANC",
       "DP"
-    ],
-    "applicableOp": [
-      "Generalista",
-      "LWO"
-    ]
-  },
-  "NOVO 018": {
-    "id": "NOVO 018",
-    "name": "Preparação do Conjunto de WO com Riser Dual Bore para retirada/fundeio da TCap",
-    "category": "Fase 0",
-    "technology": "none",
-    "applicableRig": [
-      "ANC"
     ],
     "applicableOp": [
       "Generalista",
@@ -196,26 +184,14 @@
       "LWO"
     ]
   },
-  "NOVO 019": {
-    "id": "NOVO 019",
-    "name": "Preparação do Conjunto de WO com DPR/HCR (Reentrada na ANM)",
+  "ABAN 212": {
+    "id": "ABAN 212",
+    "name": "Preparação do Conjunto de WO + TRT (Reentrada na ANM)",
     "category": "Descida WO",
     "technology": "none",
     "applicableRig": [
+      "ANC",
       "DP"
-    ],
-    "applicableOp": [
-      "Generalista",
-      "LWO"
-    ]
-  },
-  "NOVO 020": {
-    "id": "NOVO 020",
-    "name": "Preparação do Conjunto de WO com Riser Dual Bore (Reentrada na ANM)",
-    "category": "Descida WO",
-    "technology": "none",
-    "applicableRig": [
-      "ANC"
     ],
     "applicableOp": [
       "Generalista",
@@ -300,30 +276,6 @@
       "LWO"
     ]
   },
-  "ABAN 211": {
-    "id": "ABAN 211",
-    "name": "Preparação do Conjunto de WO e descida com DPR/HCR (Sonda LWO)",
-    "category": "Descida WO",
-    "technology": "none",
-    "applicableRig": [
-      "DP"
-    ],
-    "applicableOp": [
-      "LWO"
-    ]
-  },
-  "ABAN 212": {
-    "id": "ABAN 212",
-    "name": "Preparação do Conjunto de WO e descida com DPR/HCR (SS)",
-    "category": "Descida WO",
-    "technology": "none",
-    "applicableRig": [
-      "DP"
-    ],
-    "applicableOp": [
-      "Generalista"
-    ]
-  },
   "ABAN 215": {
     "id": "ABAN 215",
     "name": "Posicionamento de fluido inibido no DPR/HCR (pré conexão)",
@@ -363,8 +315,8 @@
       "LWO"
     ]
   },
-  "NOVO 013": {
-    "id": "NOVO 013",
+  "ABAN 244": {
+    "id": "ABAN 244",
     "name": "Descida do Conjunto de WO com DPR/HCR para retirada/fundeio da TCap",
     "category": "Conexão ANM",
     "technology": "none",
@@ -376,8 +328,8 @@
       "LWO"
     ]
   },
-  "NOVO 014": {
-    "id": "NOVO 014",
+  "ABAN 245": {
+    "id": "ABAN 245",
     "name": "Descida do Conjunto de WO com Riser Dual Bore para retirada/fundeio da TCap",
     "category": "Conexão ANM",
     "technology": "none",
@@ -710,20 +662,6 @@
     ],
     "nRuns": 2,
     "nContSubruns": 1
-  },
-  "NOVO 021": {
-    "id": "NOVO 021",
-    "name": "Arame - Gabaritagem com camisão acoplado",
-    "category": "Arame",
-    "technology": "wireline",
-    "applicableRig": [
-      "ANC",
-      "DP"
-    ],
-    "applicableOp": [
-      "Generalista",
-      "LWO"
-    ]
   },
   "ABAN 038": {
     "id": "ABAN 038",
@@ -1121,8 +1059,8 @@
       "LWO"
     ]
   },
-  "NOVO 001": {
-    "id": "NOVO 001",
+  "ABAN 249": {
+    "id": "ABAN 249",
     "name": "Arame - Instalação de plug no TMF (bore de produção)",
     "category": "Arame",
     "technology": "wireline",
@@ -1136,9 +1074,23 @@
     ],
     "nRuns": 2
   },
-  "NOVO 002": {
-    "id": "NOVO 002",
-    "name": "Arame - Instalação de plug no TMF (bore anular)",
+  "ABAN 250": {
+    "id": "ABAN 250",
+    "name": "Arame - Instalação de plug no TMF (bore de anular) via riser dual bore",
+    "category": "Arame",
+    "technology": "wireline",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
+  "ABAN 253": {
+    "id": "ABAN 253",
+    "name": "Arame - Instalação de plug no TMF (bore anular) a mar aberto",
     "category": "Arame",
     "technology": "wireline",
     "applicableRig": [
@@ -1248,51 +1200,9 @@
       "LWO"
     ]
   },
-  "NOVO 003": {
-    "id": "NOVO 003",
-    "name": "Limpeza e Amortecimento - Anular A (bullheading diesel + FCBA)",
-    "category": "Limpeza/Amortecimento",
-    "technology": "none",
-    "applicableRig": [
-      "ANC",
-      "DP"
-    ],
-    "applicableOp": [
-      "Generalista",
-      "LWO"
-    ]
-  },
-  "NOVO 004": {
-    "id": "NOVO 004",
+  "ABAN 255": {
+    "id": "ABAN 255",
     "name": "Limpeza e Amortecimento - Anular A (bullheading FCBA)",
-    "category": "Limpeza/Amortecimento",
-    "technology": "none",
-    "applicableRig": [
-      "ANC",
-      "DP"
-    ],
-    "applicableOp": [
-      "Generalista",
-      "LWO"
-    ]
-  },
-  "NOVO 005": {
-    "id": "NOVO 005",
-    "name": "Limpeza e Amortecimento - Anular A (bullheading MEG + FCBA)",
-    "category": "Limpeza/Amortecimento",
-    "technology": "none",
-    "applicableRig": [
-      "ANC",
-      "DP"
-    ],
-    "applicableOp": [
-      "Generalista",
-      "LWO"
-    ]
-  },
-  "NOVO 006": {
-    "id": "NOVO 006",
-    "name": "Limpeza e Amortecimento - Anular A (bullheading diesel)",
     "category": "Limpeza/Amortecimento",
     "technology": "none",
     "applicableRig": [
@@ -1472,8 +1382,8 @@
       "LWO"
     ]
   },
-  "ABAN 239": {
-    "id": "ABAN 239",
+  "ABAN 254": {
+    "id": "ABAN 254",
     "name": "Limpeza de Flowline(s) - N2 Lift",
     "category": "Limpeza de linha",
     "technology": "none",
@@ -2009,9 +1919,9 @@
       "LWO"
     ]
   },
-  "NOVO 009": {
-    "id": "NOVO 009",
-    "name": "Perfilagem/Cabo elétrico - Perfilagem para investigação de prisão de coluna (Free Point)",
+  "ABAN 251": {
+    "id": "ABAN 251",
+    "name": "Perfilagem/Cabo elétrico - Investigação com Free Point",
     "category": "Cabo Elétrico",
     "technology": "electric",
     "applicableRig": [
@@ -2023,8 +1933,8 @@
       "LWO"
     ]
   },
-  "NOVO 010": {
-    "id": "NOVO 010",
+  "ABAN 252": {
+    "id": "ABAN 252",
     "name": "Perfilagem/Cabo elétrico - Corte de coluna a mar aberto",
     "category": "Cabo Elétrico",
     "technology": "electric",
@@ -2193,25 +2103,11 @@
     ],
     "isDismountOp": true
   },
-  "NOVO 007": {
-    "id": "NOVO 007",
+  "ABAN 248": {
+    "id": "ABAN 248",
     "name": "Perfilagem/Cabo elétrico - Checagem de TOC - jogo de polias",
     "category": "Cabo Elétrico",
     "technology": "electric",
-    "applicableRig": [
-      "ANC",
-      "DP"
-    ],
-    "applicableOp": [
-      "Generalista",
-      "LWO"
-    ]
-  },
-  "NOVO 008": {
-    "id": "NOVO 008",
-    "name": "Flexitubo - Gabaritagem com motor de fundo e broca",
-    "category": "Flexitubo",
-    "technology": "ct",
     "applicableRig": [
       "ANC",
       "DP"
@@ -2565,6 +2461,20 @@
       "LWO"
     ]
   },
+  "ABAN 143": {
+    "id": "ABAN 143",
+    "name": "Flexitubo - Abertura de válvula da ANM com martelete",
+    "category": "Flexitubo",
+    "technology": "ct",
+    "applicableRig": [
+      "ANC",
+      "DP"
+    ],
+    "applicableOp": [
+      "Generalista",
+      "LWO"
+    ]
+  },
   "ABAN 144": {
     "id": "ABAN 144",
     "name": "Flexitubo - Abertura de slide sleeve",
@@ -2845,8 +2755,8 @@
       "LWO"
     ]
   },
-  "ABAN 240": {
-    "id": "ABAN 240",
+  "ABAN 148": {
+    "id": "ABAN 148",
     "name": "Flexitubo - Desmobilização (sonda LWO)",
     "category": "Flexitubo",
     "technology": "ct",
@@ -2859,8 +2769,8 @@
     ],
     "isDismountOp": true
   },
-  "ABAN 241": {
-    "id": "ABAN 241",
+  "ABAN 161": {
+    "id": "ABAN 161",
     "name": "Flexitubo - Desmobilização (sonda generalista)",
     "category": "Flexitubo",
     "technology": "ct",
@@ -3483,9 +3393,9 @@
       "LWO"
     ]
   },
-  "NOVO 011": {
-    "id": "NOVO 011",
-    "name": "BOP - Teste do BOP com ponteira apoiada sobre TH",
+  "ABAN 240": {
+    "id": "ABAN 240",
+    "name": "Teste do BOP com sub jateador e ponteira de borracha",
     "category": "BOP",
     "technology": "bop",
     "applicableRig": [
@@ -3497,9 +3407,9 @@
       "LWO"
     ]
   },
-  "NOVO 012": {
-    "id": "NOVO 012",
-    "name": "BOP - Teste do BOP com FETH apoiada sobre TH",
+  "ABAN 241": {
+    "id": "ABAN 241",
+    "name": "Teste do BOP com FETH (manobra combo)",
     "category": "BOP",
     "technology": "bop",
     "applicableRig": [
@@ -3609,8 +3519,8 @@
       "LWO"
     ]
   },
-  "NOVO 015": {
-    "id": "NOVO 015",
+  "ABAN 246": {
+    "id": "ABAN 246",
     "name": "Montagem de SFT e arranjo de superfície",
     "category": "Outros",
     "technology": "none",
@@ -3621,8 +3531,8 @@
       "Generalista"
     ]
   },
-  "NOVO 016": {
-    "id": "NOVO 016",
+  "ABAN 247": {
+    "id": "ABAN 247",
     "name": "Montagem de Terminal Head e arranjo de superfície",
     "category": "Outros",
     "technology": "none",
