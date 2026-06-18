@@ -13,17 +13,26 @@ from pathlib import Path
 from .engines.placeholders import ALWAYS_HP, HP_PREFIX_FLAG, PLAN_KEYS
 
 _DATA = Path(__file__).resolve().parent / "data"
+_PACKAGE_LINES_PATH = _DATA / "package_lines.json"
 _PACKAGE_LINES: dict | None = None
+_PACKAGE_LINES_MTIME: float | None = None
 
 _TOKEN_FIELD_RE = re.compile(r"\{\{(\w+)=")
 _SYNTHETIC = {"_bopBaixa", *ALWAYS_HP.keys(), *HP_PREFIX_FLAG.keys()}
 
 
 def package_lines() -> dict:
-    """Base bundled (carregada uma vez)."""
-    global _PACKAGE_LINES
-    if _PACKAGE_LINES is None:
-        _PACKAGE_LINES = json.loads((_DATA / "package_lines.json").read_text(encoding="utf-8"))
+    """Base bundled, recarregada quando o arquivo muda no disco.
+
+    Mantém o dump em memória, mas confere o mtime do arquivo a cada chamada e
+    relê quando ele é atualizado — evita servir base obsoleta após editar o
+    package_lines.json sem reiniciar o processo.
+    """
+    global _PACKAGE_LINES, _PACKAGE_LINES_MTIME
+    mtime = _PACKAGE_LINES_PATH.stat().st_mtime
+    if _PACKAGE_LINES is None or mtime != _PACKAGE_LINES_MTIME:
+        _PACKAGE_LINES = json.loads(_PACKAGE_LINES_PATH.read_text(encoding="utf-8"))
+        _PACKAGE_LINES_MTIME = mtime
     return _PACKAGE_LINES
 
 
