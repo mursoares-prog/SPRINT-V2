@@ -354,6 +354,92 @@ def update_package_meta(pkg_id: str, payload: PackageMetaEdit,
     return {"pkgId": pkg_id, "name": meta.name, "category": meta.category, "technology": meta.technology}
 
 
+class PackageImportItem(BaseModel):
+    pkgId: str
+    name: str
+    category: str = "Geral"
+    technology: str = "none"
+    lines: list[dict] = []
+
+
+class PackageImportPayload(BaseModel):
+    packages: list[PackageImportItem]
+
+
+@router.post("/import")
+def import_packages(payload: PackageImportPayload, db: Session = Depends(get_db),
+                    user: dict = Depends(require_admin)):
+    """Importa um batch de pacotes do sistema externo (formato ProjectFacts enriquecido).
+
+    Por pacote:
+    - pkgId já existe no bundle → cria/atualiza PackageLinesOverride (override)
+    - pkgId já existe como customizado → atualiza linhas e metadados
+    - pkgId novo → cria PackageMeta + PackageLinesOverride
+
+    Não valida tokens: o texto vem resolvido da etapa 3; placeholders adicionados
+    no enrich são intencionais e renderizam o glifo como fallback quando não mapeados.
+    """
+    if not payload.packages:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "Lista de pacotes vazia")
+
+    results = []
+    for item in payload.packages:
+        pkg_id = item.pkgId.strip()
+        if not pkg_id:
+            raise HTTPException(status.HTTP_400_BAD_REQUEST, "pkgId obrigatório em todos os pacotes")
+
+        is_bundle = _is_bundle_pkg(pkg_id)
+        meta = db.get(PackageMeta, pkg_id)
+
+        if not is_bundle and meta is None:
+            # Novo pacote customizado — cria meta e linhas
+            db.add(PackageMeta(
+                pkg_id=pkg_id, name=item.name.strip() or pkg_id,
+                category=item.category, technology=item.technology,
+                author=user["username"],
+            ))
+            db.add(PackageLinesOverride(pkg_id=pkg_id, lines=item.lines, author=user["username"]))
+            tipo = "inclusão"
+            resumo = f"Import: criação do pacote {pkg_id} — {item.name}"
+            antes, depois = "", f"{len(item.lines)} linha(s)"
+        elif not is_bundle and meta is not None:
+            # Pacote customizado existente — atualiza meta e linhas
+            meta.name = item.name.strip() or meta.name
+            meta.category = item.category
+            meta.technology = item.technology
+            meta.author = user["username"]
+            existing_lines = db.get(PackageLinesOverride, pkg_id)
+            if existing_lines:
+                antes = f"{len(existing_lines.lines)} linha(s)"
+                existing_lines.lines = item.lines
+                existing_lines.author = user["username"]
+            else:
+                antes = "(sem override)"
+                db.add(PackageLinesOverride(pkg_id=pkg_id, lines=item.lines, author=user["username"]))
+            tipo = "edição"
+            resumo = f"Import: atualização do pacote customizado {pkg_id}"
+            depois = f"{len(item.lines)} linha(s)"
+        else:
+            # Pacote do bundle — cria/atualiza override estrutural
+            existing_lines = db.get(PackageLinesOverride, pkg_id)
+            if existing_lines:
+                antes = f"{len(existing_lines.lines)} linha(s)"
+                existing_lines.lines = item.lines
+                existing_lines.author = user["username"]
+            else:
+                antes = "(bundle)"
+                db.add(PackageLinesOverride(pkg_id=pkg_id, lines=item.lines, author=user["username"]))
+            tipo = "edição"
+            resumo = f"Import: override do pacote bundle {pkg_id}"
+            depois = f"{len(item.lines)} linha(s)"
+
+        _log_change(db, pkg_id, None, tipo, resumo, antes, depois, user["username"])
+        results.append({"pkgId": pkg_id, "tipo": tipo, "lines": len(item.lines)})
+
+    db.commit()
+    return {"imported": len(results), "packages": results}
+
+
 @router.delete("/packages/{pkg_id}")
 def delete_package(pkg_id: str, db: Session = Depends(get_db),
                    user: dict = Depends(require_admin)):

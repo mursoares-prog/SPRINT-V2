@@ -8,7 +8,7 @@ from sqlalchemy import inspect, text
 from . import models  # noqa: F401 — registra os modelos no metadata
 from .config import CORS_ORIGINS
 from .database import Base, engine
-from .routers import projects, engines, auth, changelog, base
+from .routers import projects, engines, auth, changelog, base, logic
 
 # Dev: cria as tabelas na subida. Em produção, migrar para Alembic.
 Base.metadata.create_all(bind=engine)
@@ -59,6 +59,7 @@ app.include_router(engines.router)
 app.include_router(auth.router)
 app.include_router(changelog.router)
 app.include_router(base.router)
+app.include_router(logic.router)
 
 
 @app.get("/api/health", tags=["health"])

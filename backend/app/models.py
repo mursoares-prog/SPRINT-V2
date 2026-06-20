@@ -4,7 +4,7 @@ from __future__ import annotations
 import uuid
 from datetime import datetime, timezone
 
-from sqlalchemy import JSON, DateTime, Float, Integer, String, Text
+from sqlalchemy import JSON, Boolean, DateTime, Float, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from .database import Base
@@ -125,5 +125,23 @@ class PackageMeta(Base):
     name: Mapped[str] = mapped_column(Text)
     category: Mapped[str] = mapped_column(String(100), default="")
     technology: Mapped[str] = mapped_column(String(30), default="none")
+    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
+
+
+class LogicScopeOverride(Base):
+    """Override (ou novo escopo custom) da árvore de decisão da engine de sequenciamento.
+
+    is_custom=False → override de escopo bundle (preserva behaviour; admin pode restaurar).
+    is_custom=True  → escopo novo definido inteiramente pelo admin.
+    sections armazena LSec[] serializado (mesmo formato do logicSecs.ts).
+    """
+
+    __tablename__ = "logic_scope_overrides"
+
+    scope_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    is_custom: Mapped[bool] = mapped_column(Boolean, default=False)
+    label: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    sections: Mapped[list] = mapped_column(JSON, default=list)
     author: Mapped[str | None] = mapped_column(String(100), nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
