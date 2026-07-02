@@ -16,6 +16,7 @@ BUNDLE_SCOPE_IDS = {
     'FSU_TT_FT', 'FSU_TT_BDC', 'FSU_Conv_BOP', 'FSU_Conv_RCMA',
     'FSU_Sup_COP', 'FSU_Sup_PWC', 'FS1_Mec',
     'FS2_Conv_BOP', 'FS2_Conv_RCMA', 'FS2_Sup_COP', 'FS2_Sup_PWC',
+    'MOB_DESCIDA', 'MOB_REENTRADA_ANC',
 }
 
 router = APIRouter(prefix="/api/logic", tags=["logic"])
@@ -39,6 +40,12 @@ class ScopeCreatePayload(BaseModel):
     sections: list[dict] = []
 
 
+class ScopeMetaPayload(BaseModel):
+    fase: str | None = None
+    opTypes: list[str] | None = None
+    label: str | None = None
+
+
 @router.get("/scopes")
 def list_scopes(db: Session = Depends(get_db)):
     """Lista todos os overrides de escopo e escopos custom."""
@@ -48,6 +55,8 @@ def list_scopes(db: Session = Depends(get_db)):
             "scopeId": r.scope_id,
             "isCustom": r.is_custom,
             "label": r.label,
+            "fase": r.fase,
+            "opTypes": r.op_types,
             "sectionCount": len(r.sections),
             "author": r.author,
             "updatedAt": r.updated_at,
@@ -114,6 +123,31 @@ def create_scope(payload: ScopeCreatePayload,
     _log(db, scope_id, "inclusão", f"Criação do escopo custom '{scope_id}' — {payload.label}", user["username"])
     db.commit()
     return {"scopeId": scope_id, "isCustom": True, "label": row.label, "sectionCount": len(payload.sections)}
+
+
+@router.patch("/scopes/{scope_id}/meta")
+def update_scope_meta(scope_id: str, payload: ScopeMetaPayload,
+                      db: Session = Depends(get_db), user: dict = Depends(require_admin)):
+    """Atualiza metadados (fase, opTypes, label) de um escopo sem alterar as seções.
+    Cria a linha se ainda não existir (necessário para renomear blocos antes do primeiro save)."""
+    row = db.get(LogicScopeOverride, scope_id)
+    if row is None:
+        is_custom = scope_id not in BUNDLE_SCOPE_IDS
+        row = LogicScopeOverride(
+            scope_id=scope_id, is_custom=is_custom, sections=[],
+            author=user["username"],
+        )
+        db.add(row)
+    fields = payload.model_fields_set
+    if 'fase' in fields:
+        row.fase = payload.fase
+    if 'opTypes' in fields:
+        row.op_types = payload.opTypes
+    if 'label' in fields:
+        row.label = payload.label.strip() if payload.label else None
+    row.author = user["username"]
+    db.commit()
+    return {"scopeId": scope_id, "fase": row.fase, "opTypes": row.op_types, "label": row.label}
 
 
 @router.delete("/scopes/{scope_id}")

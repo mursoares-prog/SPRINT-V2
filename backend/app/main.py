@@ -41,6 +41,24 @@ def _migrate_line_override() -> None:
 
 _migrate_line_override()
 
+
+def _migrate_logic_scope_override() -> None:
+    """Micro-migração idempotente: adiciona fase e op_types em logic_scope_overrides."""
+    insp = inspect(engine)
+    if "logic_scope_overrides" not in insp.get_table_names():
+        return
+    existing = {c["name"] for c in insp.get_columns("logic_scope_overrides")}
+    new_cols = {"fase": "VARCHAR(20)", "op_types": "JSON"}
+    missing = {name: typ for name, typ in new_cols.items() if name not in existing}
+    if not missing:
+        return
+    with engine.begin() as conn:
+        for name, typ in missing.items():
+            conn.execute(text(f"ALTER TABLE logic_scope_overrides ADD COLUMN {name} {typ}"))
+
+
+_migrate_logic_scope_override()
+
 app = FastAPI(title="SPRINT ABAN API", version="0.1.0")
 
 app.add_middleware(

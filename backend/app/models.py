@@ -4,6 +4,8 @@ from __future__ import annotations
 import uuid
 from datetime import datetime, timezone
 
+from typing import Optional
+
 from sqlalchemy import JSON, Boolean, DateTime, Float, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -52,12 +54,12 @@ class ChangeLogEntry(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     data: Mapped[str] = mapped_column(String(10))   # ISO yyyy-mm-dd
     pacote: Mapped[str] = mapped_column(String(50), index=True)
-    linha: Mapped[int | None] = mapped_column(Integer, nullable=True)  # posição 1-based; null se N/A
+    linha: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)  # posição 1-based; null se N/A
     tipo: Mapped[str] = mapped_column(String(30))
     resumo: Mapped[str] = mapped_column(Text)
-    antes: Mapped[str | None] = mapped_column(Text, nullable=True)
-    depois: Mapped[str | None] = mapped_column(Text, nullable=True)
-    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    antes: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    depois: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    author: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
 
@@ -78,14 +80,14 @@ class LineOverride(Base):
     pkg_id: Mapped[str] = mapped_column(String(50), primary_key=True)
     line_index: Mapped[int] = mapped_column(Integer, primary_key=True)
     text: Mapped[str] = mapped_column(Text)
-    duration: Mapped[float | None] = mapped_column(Float, nullable=True)
-    rec: Mapped[str | None] = mapped_column(Text, nullable=True)
-    pad: Mapped[str | None] = mapped_column(Text, nullable=True)
-    ow_fase: Mapped[str | None] = mapped_column(String(100), nullable=True)
-    ow_atividade: Mapped[str | None] = mapped_column(String(150), nullable=True)
-    ow_operacao: Mapped[str | None] = mapped_column(String(200), nullable=True)
-    ow_etapa: Mapped[str | None] = mapped_column(String(200), nullable=True)
-    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    duration: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
+    rec: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    pad: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    ow_fase: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    ow_atividade: Mapped[Optional[str]] = mapped_column(String(150), nullable=True)
+    ow_operacao: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    ow_etapa: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    author: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
 
 
@@ -107,7 +109,7 @@ class PackageLinesOverride(Base):
 
     pkg_id: Mapped[str] = mapped_column(String(50), primary_key=True)
     lines: Mapped[list] = mapped_column(JSON, default=list)
-    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    author: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
 
 
@@ -125,7 +127,7 @@ class PackageMeta(Base):
     name: Mapped[str] = mapped_column(Text)
     category: Mapped[str] = mapped_column(String(100), default="")
     technology: Mapped[str] = mapped_column(String(30), default="none")
-    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    author: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
 
 
@@ -141,7 +143,9 @@ class LogicScopeOverride(Base):
 
     scope_id: Mapped[str] = mapped_column(String(50), primary_key=True)
     is_custom: Mapped[bool] = mapped_column(Boolean, default=False)
-    label: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    label: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    fase: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
+    op_types: Mapped[Optional[list]] = mapped_column(JSON, nullable=True)
     sections: Mapped[list] = mapped_column(JSON, default=list)
-    author: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    author: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
