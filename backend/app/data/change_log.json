@@ -2287,5 +2287,65 @@
     "resumo": "Nova linha de teste de estanqueidade do TAE adicionada ao final do pacote (índice 8): pressurização COP/COI com token {{pressaoEstTae}}.",
     "antes": "(linha não existia)",
     "depois": "Pressurizar COP/COI e confirmar estanqueidade do TAE com {{pressaoEstTae=XXX}} psi. | owEtapa: Verificando eCSB com pressão | genOperacao: Teste de estanqueidade de coluna | duration: 2 | compensando: true"
+  },
+  {
+    "id": 231,
+    "data": "2026-06-17",
+    "pacote": "ABAN 247",
+    "linha": 2,
+    "tipo": "edição",
+    "resumo": "Reordenado conforme a planilha SEEDS 2026-06-15: a linha de teste de estanqueidade de superfície/manifold contra o terminal head estava deslocada para dentro do bloco de eCSB cabo/arame (após \"Abrir válvulas do CWO\"). Movida de volta para logo após \"Montar anel tensionador\", antes do marcador separador. Conteúdo das linhas inalterado — só a ordem.",
+    "antes": "L2: (marcador vazio) | L3: Abrir válvulas do CWO e ANM e descer trem... | L4: [HOLD POINT SANM] Montar e testar linhas de superfície + manifold... contra bloco do terminal head.",
+    "depois": "L2: [HOLD POINT SANM] Montar e testar linhas de superfície + manifold... contra bloco do terminal head. | L3: (marcador vazio) | L4: Abrir válvulas do CWO e ANM e descer trem..."
+  },
+  {
+    "id": 232,
+    "data": "2026-06-17",
+    "pacote": "ABAN 244",
+    "linha": 0,
+    "tipo": "edição",
+    "resumo": "Corrigido typo de origem (presente também na planilha SEEDS): sufixo espúrio \".apa\" no fim do texto. Mesmo erro persiste no ABAN 011 L0 (não corrigido nesta edição).",
+    "antes": "Liberar acesso para passagem do Conjunto de WO. Mergulhar conjunto.apa",
+    "depois": "Liberar acesso para passagem do Conjunto de WO. Mergulhar conjunto."
+  },
+  {
+    "id": 233,
+    "data": "2026-06-17",
+    "pacote": "ABAN 011",
+    "linha": 0,
+    "tipo": "edição",
+    "resumo": "Corrigido o mesmo typo de origem do ABAN 244 (presente também na planilha SEEDS): sufixo espúrio \".apa\" no fim do texto.",
+    "antes": "Liberar acesso para passagem do Conjunto de WO. Mergulhar conjunto.apa",
+    "depois": "Liberar acesso para passagem do Conjunto de WO. Mergulhar conjunto."
+  },
+  {
+    "id": 234,
+    "data": "2026-06-17",
+    "pacote": "ABAN 062",
+    "linha": null,
+    "tipo": "edição",
+    "resumo": "Revisão de conteúdo (bullheading sem MEG): L0 — removido \"MEG\" (agora só FCBA) e B4\" → DPR/B4\"; L2 — STV → eCSB e rótulo \"Cenário de UEP indisponível:\" substituído por \"(Contingência) Cenário de baixa injetividade e de UEP indisponível:\"; L3 — STV → eCSB e B4\" → DPR/B4\".",
+    "antes": "L0: Amortecer COP com MEG + FCBA {{amortFcbaDensidade=X,X}} ppg ... via B4\" > COP > Formação ... | L2: Cenário de UEP indisponível: ... após a instalação de STV. | L3: ... após a instalação de STV. ... B4\" > COP > furos ...",
+    "depois": "L0: Amortecer COP com FCBA {{amortFcbaDensidade=X,X}} ppg ... via DPR/B4\" > COP > Formação ... | L2: (Contingência) Cenário de baixa injetividade e de UEP indisponível: ... após a instalação de eCSB. | L3: ... após a instalação de eCSB. ... DPR/B4\" > COP > furos ..."
+  },
+  {
+    "id": 235,
+    "data": "2026-06-17",
+    "pacote": "ABAN 062",
+    "linha": null,
+    "tipo": "metadado",
+    "resumo": "Removido MEG dos metadados do pacote em packages.ts: nome \"...(bullheading MEG + FCBA)\" → \"...(bullheading FCBA)\" e rótulo FLUID_VARIANT \"MEG + FCBA\" → \"FCBA\".",
+    "antes": "name: Limpeza e Amortecimento - COP (bullheading MEG + FCBA) | FLUID_VARIANT.label: MEG + FCBA",
+    "depois": "name: Limpeza e Amortecimento - COP (bullheading FCBA) | FLUID_VARIANT.label: FCBA"
+  },
+  {
+    "id": 236,
+    "data": "2026-06-17",
+    "pacote": "ABAN 062",
+    "linha": 1,
+    "tipo": "edição",
+    "resumo": "Removida quebra de linha (\\n) espúria no meio do texto da L1. Edições do 062 (ids 234-236) propagadas para a base do backend (package_lines.json e packages.json).",
+    "antes": "Ao final do bombeio, confirmar que não há pressão em superfície e que \\neventual HC presente na coluna foi recalcado para formação.",
+    "depois": "Ao final do bombeio, confirmar que não há pressão em superfície e que eventual HC presente na coluna foi recalcado para formação."
   }
 ]

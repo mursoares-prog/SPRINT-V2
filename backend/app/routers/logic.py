@@ -10,13 +10,15 @@ from sqlalchemy.orm import Session
 
 from ..auth import require_admin
 from ..database import get_db
-from ..models import ChangeLogEntry, LogicScopeOverride
+from ..models import ChangeLogEntry, LogicScopeOverride, LogicScopeVersion
+
+# Máximo de versões (snapshots) retidas por escopo — as mais antigas são podadas no save.
+MAX_VERSIONS_PER_SCOPE = 50
 
 BUNDLE_SCOPE_IDS = {
     'FSU_TT_FT', 'FSU_TT_BDC', 'FSU_Conv_BOP', 'FSU_Conv_RCMA',
     'FSU_Sup_COP', 'FSU_Sup_PWC', 'FS1_Mec',
     'FS2_Conv_BOP', 'FS2_Conv_RCMA', 'FS2_Sup_COP', 'FS2_Sup_PWC',
-    'MOB_DESCIDA', 'MOB_REENTRADA_ANC',
 }
 
 router = APIRouter(prefix="/api/logic", tags=["logic"])
@@ -28,6 +30,26 @@ def _log(db: Session, scope_id: str, tipo: str, resumo: str, author: str) -> Non
         id=next_id, data=date.today().isoformat(), pacote=scope_id,
         linha=None, tipo=tipo, resumo=resumo, antes="", depois="", author=author,
     ))
+
+
+def _snapshot(db: Session, scope_id: str, sections: list[dict], author: str,
+              note: str, label: str | None = None) -> None:
+    """Grava um snapshot versionado das seções e poda as versões excedentes (mantém as
+    MAX_VERSIONS_PER_SCOPE mais recentes por escopo)."""
+    db.add(LogicScopeVersion(
+        scope_id=scope_id, sections=sections, label=label, note=note, author=author,
+    ))
+    db.flush()  # garante que o novo snapshot conte na poda abaixo
+    old_ids = db.execute(
+        select(LogicScopeVersion.id)
+        .where(LogicScopeVersion.scope_id == scope_id)
+        .order_by(LogicScopeVersion.created_at.desc())
+        .offset(MAX_VERSIONS_PER_SCOPE)
+    ).scalars().all()
+    for vid in old_ids:
+        obj = db.get(LogicScopeVersion, vid)
+        if obj is not None:
+            db.delete(obj)
 
 
 class ScopeSectionsPayload(BaseModel):
@@ -97,6 +119,7 @@ def save_scope(scope_id: str, payload: ScopeSectionsPayload,
         tipo = "edição"
         resumo = f"Atualização das seções do escopo {scope_id} ({len(payload.sections)} seção(ões))"
     _log(db, scope_id, tipo, resumo, user["username"])
+    _snapshot(db, scope_id, payload.sections, user["username"], "Save", row.label)
     db.commit()
     return {"scopeId": scope_id, "isCustom": row.is_custom, "sectionCount": len(payload.sections)}
 
@@ -121,6 +144,7 @@ def create_scope(payload: ScopeCreatePayload,
     )
     db.add(row)
     _log(db, scope_id, "inclusão", f"Criação do escopo custom '{scope_id}' — {payload.label}", user["username"])
+    _snapshot(db, scope_id, payload.sections, user["username"], "Criação", row.label)
     db.commit()
     return {"scopeId": scope_id, "isCustom": True, "label": row.label, "sectionCount": len(payload.sections)}
 
@@ -163,3 +187,67 @@ def delete_scope(scope_id: str, db: Session = Depends(get_db), user: dict = Depe
     _log(db, scope_id, tipo, resumo, user["username"])
     db.commit()
     return {"scopeId": scope_id, "deleted": True, "wasCustom": row.is_custom}
+
+
+# ── Versionamento (histórico de snapshots para retorno a versões anteriores) ──
+
+
+@router.get("/scopes/{scope_id}/versions")
+def list_versions(scope_id: str, db: Session = Depends(get_db)):
+    """Lista os snapshots de um escopo (mais recentes primeiro), sem as seções."""
+    rows = db.execute(
+        select(LogicScopeVersion)
+        .where(LogicScopeVersion.scope_id == scope_id)
+        .order_by(LogicScopeVersion.created_at.desc())
+    ).scalars().all()
+    return [
+        {
+            "id": r.id,
+            "scopeId": r.scope_id,
+            "label": r.label,
+            "note": r.note,
+            "author": r.author,
+            "sectionCount": len(r.sections),
+            "createdAt": r.created_at,
+        }
+        for r in rows
+    ]
+
+
+@router.get("/scopes/{scope_id}/versions/{version_id}")
+def get_version(scope_id: str, version_id: str, db: Session = Depends(get_db)):
+    """Retorna as seções (LSec[]) de um snapshot específico, para preview ou restauração."""
+    row = db.get(LogicScopeVersion, version_id)
+    if row is None or row.scope_id != scope_id:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Versão não encontrada")
+    return {
+        "id": row.id, "scopeId": row.scope_id, "label": row.label, "note": row.note,
+        "author": row.author, "createdAt": row.created_at, "sections": row.sections,
+    }
+
+
+@router.post("/scopes/{scope_id}/versions/{version_id}/restore")
+def restore_version(scope_id: str, version_id: str,
+                    db: Session = Depends(get_db), user: dict = Depends(require_admin)):
+    """Restaura o escopo ao conteúdo de um snapshot. Não-destrutivo: grava uma nova versão
+    com o conteúdo restaurado, de modo que o estado atual anterior permaneça no histórico."""
+    ver = db.get(LogicScopeVersion, version_id)
+    if ver is None or ver.scope_id != scope_id:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Versão não encontrada")
+    row = db.get(LogicScopeOverride, scope_id)
+    if row is None:
+        is_custom = scope_id not in BUNDLE_SCOPE_IDS
+        row = LogicScopeOverride(
+            scope_id=scope_id, is_custom=is_custom, sections=ver.sections,
+            label=ver.label, author=user["username"],
+        )
+        db.add(row)
+    else:
+        row.sections = ver.sections
+        row.author = user["username"]
+    resumo = f"Restauração do escopo {scope_id} à versão de {ver.created_at:%Y-%m-%d %H:%M}"
+    _log(db, scope_id, "reestruturação", resumo, user["username"])
+    _snapshot(db, scope_id, ver.sections, user["username"],
+              f"Restauração da versão {ver.created_at:%d/%m %H:%M}", row.label)
+    db.commit()
+    return {"scopeId": scope_id, "isCustom": row.is_custom, "sectionCount": len(ver.sections)}

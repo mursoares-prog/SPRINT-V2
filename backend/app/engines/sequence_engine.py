@@ -197,7 +197,12 @@ def generate_schedule(inputs: dict) -> list[dict]:
         if pkg_marker == "POST_MOB_INJECT":
             has_cc = "corrosion_cap" in equipments
             if has_cc:
-                ccap_pkg = "ABAN 009" if operation_type == "LWO" else "ABAN 008"
+                # Método de retirada da CCAP: 'cable' (ABAN 009) ou 'workstring' (ABAN 008).
+                # Default preserva o comportamento antigo por tipo de operação (espelha o TS).
+                ccap_method = inputs.get("ccapRemovalMethod") or ("cable" if operation_type == "LWO" else "workstring")
+                ccap_pkg = "ABAN 009" if ccap_method == "cable" else "ABAN 008"
+                ccap_conting_reason = ("Contingência: retirada de CCAP a cabo" if ccap_method == "cable"
+                                       else "Contingência: retirada de CCAP com coluna de trabalho (garatéia)")
                 ccap_before = inputs.get("corrosionCapBeforeIntervention")
                 if ccap_before is False:
                     add_item(items, ccap_pkg, "Fase 0")
@@ -211,16 +216,14 @@ def generate_schedule(inputs: dict) -> list[dict]:
                         ccap_conting = _is_conting(inputs.get("contingencyCcapWorkstring"))
                         add_item(items, ccap_pkg, "Fase 0", {
                             "isContingency": ccap_conting,
-                            "contingencyReason": ("Contingência: retirada de CCAP a cabo" if operation_type == "LWO"
-                                                  else "Contingência: retirada de CCAP com coluna de trabalho (garatéia)") if ccap_conting else None,
+                            "contingencyReason": ccap_conting_reason if ccap_conting else None,
                         })
                 else:
                     if _yes_or_conting(inputs.get("contingencyCcapWorkstring")):
                         ccap_conting = _is_conting(inputs.get("contingencyCcapWorkstring"))
                         add_item(items, ccap_pkg, "Fase 0", {
                             "isContingency": ccap_conting,
-                            "contingencyReason": ("Contingência: retirada de CCAP a cabo" if operation_type == "LWO"
-                                                  else "Contingência: retirada de CCAP com coluna de trabalho (garatéia)") if ccap_conting else None,
+                            "contingencyReason": ccap_conting_reason if ccap_conting else None,
                         })
             has_tree_cap = "tree_cap" in equipments or "mini_tree_cap" in equipments
             if has_tree_cap and inputs.get("tcapRemovalMethod") == "rov":
@@ -272,6 +275,24 @@ def generate_schedule(inputs: dict) -> list[dict]:
                     add_item(items, "ABAN 125", sphase, {"isContingency": True, "contingencyReason": "Contingência: jateamento com flexitubo para abertura de válvulas da ANM"})
                 if "gabarit_ft" in conts:
                     add_item(items, "ABAN 124", sphase, {"isContingency": True, "contingencyReason": "Contingência: gabaritagem com motor de fundo e broca para abertura de válvulas da ANM"})
+            continue
+
+        # ─── ANM_FORCE_INJECT ────────────────────────────────────────
+        # Abertura de válvula da ANM com FT (após testes de bloco) — espelha o TS.
+        if pkg_marker == "ANM_FORCE_INJECT":
+            if _yes_or_conting(inputs.get("anmForceOpen")):
+                force_conting = _is_conting(inputs.get("anmForceOpen"))
+                methods = _c(inputs.get("anmForceMethod"), [])
+                if "hammer" in methods:
+                    add_item(items, "ABAN 143", sphase, {
+                        "isContingency": force_conting,
+                        "contingencyReason": "Contingência: abertura de válvula da ANM com martelete (FT)" if force_conting else None,
+                    })
+                if "motor_broca" in methods:
+                    add_item(items, "ABAN 124", sphase, {
+                        "isContingency": force_conting,
+                        "contingencyReason": "Contingência: gabaritagem com motor de fundo e broca para abertura de válvulas da ANM" if force_conting else None,
+                    })
             continue
 
         # ─── TCAP_INJECT ─────────────────────────────────────────────
@@ -367,6 +388,9 @@ def generate_schedule(inputs: dict) -> list[dict]:
 
         # ─── LIMPEZA_INJECT ──────────────────────────────────────────
         if pkg_marker == "LIMPEZA_INJECT":
+            # Poço já isolado: não amortecer na Fase 1A
+            if inputs.get("killWellFase1A") == "no":
+                continue
             if post_perf_processed and scope_id == "FSU_TT_BDC" and rig_type == "ANC" and inputs.get("stdvDispositionAfterTest") == "keep":
                 continue
             has_camisao_conting = "contingency" in _c(inputs.get("installCamisao"), [])
@@ -378,7 +402,11 @@ def generate_schedule(inputs: dict) -> list[dict]:
                 pkg = "ABAN 219"
             else:
                 pkg = "ABAN 061"
-            add_item(items, pkg, sphase)
+            kill_conting = inputs.get("killWellFase1A") == "contingency"
+            add_item(items, pkg, sphase, {
+                "isContingency": True,
+                "contingencyReason": "Contingência: amortecimento da COP/COI",
+            } if kill_conting else None)
             continue
 
         # ─── DHSV_TEST_INJECT ────────────────────────────────────────
@@ -389,11 +417,23 @@ def generate_schedule(inputs: dict) -> list[dict]:
 
         # ─── ANULAR_A_INJECT ─────────────────────────────────────────
         if pkg_marker == "ANULAR_A_INJECT":
+            # Poço já isolado (não amortecer): no lugar da despressurização do anular A,
+            # confirma a estanqueidade do poço (ABAN 226).
+            if inputs.get("killWellFase1A") == "no":
+                add_item(items, "ABAN 226", sphase)
+                continue
+            kill_conting = inputs.get("killWellFase1A") == "contingency"
+            # Amortecimento contingencial: testar estanqueidade antes (firme); só amortecer se reprovar.
+            if kill_conting:
+                add_item(items, "ABAN 226", sphase)
             if inputs.get("anularAMinPressure") == "nonzero":
                 pkg = "ABAN 064" if inputs.get("anularFluid") == "diesel" else "ABAN 065"
             else:
                 pkg = "ABAN 063"
-            add_item(items, pkg, sphase)
+            add_item(items, pkg, sphase, {
+                "isContingency": True,
+                "contingencyReason": "Contingência: despressurização/preenchimento do anular A",
+            } if kill_conting else None)
             continue
 
         # ─── STDV_TEST_INJECT ────────────────────────────────────────
@@ -408,6 +448,12 @@ def generate_schedule(inputs: dict) -> list[dict]:
         if pkg_marker == "PERF_INJECT":
             eff = "through_casing" if bop_active else base_mode
             amort_pkg = "ABAN 255"  # amortecimento de Anular A pos-canhoneio (bullheading FCBA) - consolidado
+            # Amortecimento da Fase 1A: 'no' = poço já isolado (não amortecer); 'contingency' = só contingência
+            kill_no = inputs.get("killWellFase1A") == "no"
+            kill_amort_opts = {
+                "isContingency": True,
+                "contingencyReason": "Contingência: amortecimento do anular A pós-canhoneio",
+            } if inputs.get("killWellFase1A") == "contingency" else None
             if uses_fs1_barrier:
                 if not rcma_fluid_csb and _c(inputs.get("fs1PerfProfunda"), "yes") == "yes":
                     method = _c(inputs.get("tubingPerfMethod"), "electric")
@@ -423,14 +469,15 @@ def generate_schedule(inputs: dict) -> list[dict]:
                             add_item(items, mnt, sphase, {"autoInserted": True})
                         current_tech = perf_tech
                     add_item(items, perf_pkg, sphase)
-                    add_item(items, amort_pkg, sphase)
+                    if not kill_no:
+                        add_item(items, amort_pkg, sphase, kill_amort_opts)
                 post_perf_processed = True
                 continue
             skip_amort = scope_id == "FSU_TT_BDC" and rig_type == "ANC" and inputs.get("stdvDispositionAfterTest") == "keep"
             if inputs.get("tubingPerfMethod") == "wireline":
                 add_item(items, "ABAN 045", sphase)
-                if not skip_amort:
-                    add_item(items, amort_pkg, sphase)
+                if not skip_amort and not kill_no:
+                    add_item(items, amort_pkg, sphase, kill_amort_opts)
             else:
                 perf_tech = "ct" if inputs.get("tubingPerfMethod") == "ct" else "electric"
                 perf_pkg = "ABAN 154" if inputs.get("tubingPerfMethod") == "ct" else "ABAN 101"
@@ -444,8 +491,8 @@ def generate_schedule(inputs: dict) -> list[dict]:
                         add_item(items, mnt, sphase, {"autoInserted": True})
                     current_tech = perf_tech
                 add_item(items, perf_pkg, sphase)
-                if not skip_amort:
-                    add_item(items, amort_pkg, sphase)
+                if not skip_amort and not kill_no:
+                    add_item(items, amort_pkg, sphase, kill_amort_opts)
             post_perf_processed = True
             continue
 
@@ -672,6 +719,10 @@ def generate_schedule(inputs: dict) -> list[dict]:
             is_rcma_fluid_principal = inputs.get("scopeId") == "FSU_Conv_RCMA" and inputs.get("rcmaCsbPrincipal") == "fluid_csb"
             if is_rcma_fluid_principal:
                 continue
+            # Não previsto: pula canhoneio raso e instalação de CSB 2 (espelha o TS)
+            if inputs.get("fs1CsbSecondaryMode") == "no":
+                continue
+            csb2_conting = inputs.get("fs1CsbSecondaryMode") == "contingency"
             csb2 = _c(inputs.get("fs1CsbSecondary"), "plug_th")
             eff_mode = "through_casing" if bop_active else base_mode
             do_rasa_perf = (not uses_fs1_barrier) or _c(inputs.get("fs1PerfRasa"), "yes") == "yes"
@@ -705,10 +756,16 @@ def generate_schedule(inputs: dict) -> list[dict]:
 
             if csb2 == "tae":
                 trans2("electric")
-                add_item(items, "ABAN 237", sphase)
+                add_item(items, "ABAN 237", sphase, {
+                    "isContingency": True,
+                    "contingencyReason": "Contingência: instalação de TAE como CSB 2",
+                } if csb2_conting else None)
             else:
                 trans2("wireline")
-                add_item(items, "ABAN 042", sphase)
+                add_item(items, "ABAN 042", sphase, {
+                    "isContingency": True,
+                    "contingencyReason": "Contingência: instalação de plug TH como CSB 2",
+                } if csb2_conting else None)
             continue
 
         # ─── RCMA_CEMENT_LOG_INJECT ──────────────────────────────────
@@ -1062,13 +1119,13 @@ def generate_schedule(inputs: dict) -> list[dict]:
             continue
 
         # ─── BOP_TEST_INJECT ─────────────────────────────────────────
+        # Marcador presente apenas em escopos com BOP; bopTestMethod vale para todos (espelha o TS).
         if pkg_marker == "BOP_TEST_INJECT":
-            is_fs2_non_rcma = (inputs.get("scopeId") or "").startswith("FS2") and inputs.get("scopeId") != "FS2_Conv_RCMA"
-            if is_fs2_non_rcma and inputs.get("bopTestMethod") == "feth_on_th":
-                pass
-            elif is_fs2_non_rcma and inputs.get("bopTestMethod") == "ponteira_orman":
+            if inputs.get("bopTestMethod") == "feth_on_th":
+                pass  # teste deslocado para após a FETH — BOP_TEST_FETH_INJECT cuida disso
+            elif inputs.get("bopTestMethod") == "ponteira_orman":
                 add_item(items, "ABAN 240", sphase)
-            elif is_fs2_non_rcma and inputs.get("bopTestMethod") == "coluna_flutuada":
+            elif inputs.get("bopTestMethod") == "coluna_flutuada":
                 add_item(items, "ABAN 229", sphase)
             else:
                 add_item(items, "ABAN 228", sphase)
@@ -1076,8 +1133,7 @@ def generate_schedule(inputs: dict) -> list[dict]:
 
         # ─── BOP_TEST_FETH_INJECT ────────────────────────────────────
         if pkg_marker == "BOP_TEST_FETH_INJECT":
-            is_fs2_non_rcma = (inputs.get("scopeId") or "").startswith("FS2") and inputs.get("scopeId") != "FS2_Conv_RCMA"
-            if is_fs2_non_rcma and inputs.get("bopTestMethod") == "feth_on_th":
+            if inputs.get("bopTestMethod") == "feth_on_th":
                 add_item(items, "ABAN 241", sphase)
             continue
 
@@ -1239,7 +1295,9 @@ def generate_schedule(inputs: dict) -> list[dict]:
     base_items = [i for i in items if not i.get("autoInserted")]
     rebuilt_items = apply_transitions(base_items, rig_type, operation_type, percentile, base_mode)
 
-    tcap_unseating_ids = {"ABAN 020", "ABAN 021", "ABAN 022", "ABAN 177"}
+    # A âncora cobre as duas formas de retirar a TCap (espelha o TS): retirada por coluna
+    # termina em 020/021/022; retirada por ROV é o próprio 010 (Fase 0, pós-mobilização).
+    tcap_unseating_ids = {"ABAN 010", "ABAN 020", "ABAN 021", "ABAN 022", "ABAN 177"}
     last_tcap_idx = -1
     for i, item in enumerate(rebuilt_items):
         if item["packageId"] in tcap_unseating_ids:

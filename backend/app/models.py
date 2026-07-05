@@ -149,3 +149,23 @@ class LogicScopeOverride(Base):
     sections: Mapped[list] = mapped_column(JSON, default=list)
     author: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, onupdate=_now)
+
+
+class LogicScopeVersion(Base):
+    """Snapshot versionado das seções de um escopo, gravado a cada save.
+
+    Viabiliza retorno a versões anteriores no editor de lógica. Cada save do escopo
+    (PUT/POST/restore) cria uma linha com o snapshot completo de `sections` (LSec[]).
+    Retenção: mantém as 50 versões mais recentes por scope_id (poda no save).
+    `note` guarda um resumo curto (ex.: "Save", "Restauração da versão #12").
+    """
+
+    __tablename__ = "logic_scope_versions"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    scope_id: Mapped[str] = mapped_column(String(50), index=True)
+    sections: Mapped[list] = mapped_column(JSON, default=list)
+    label: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    note: Mapped[Optional[str]] = mapped_column(String(300), nullable=True)
+    author: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
