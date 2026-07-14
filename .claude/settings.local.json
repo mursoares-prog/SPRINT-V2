@@ -161,7 +161,9 @@
       "Bash(./backend/.venv/Scripts/python.exe _gen_decided.py)",
       "Bash(rm -f _gen_decided.py)",
       "Bash(./backend/.venv/Scripts/python.exe _apply_fields.py)",
-      "Bash(./backend/.venv/Scripts/python.exe _apply_fields.py --write)"
+      "Bash(./backend/.venv/Scripts/python.exe _apply_fields.py --write)",
+      "Bash(npx --prefix abandono-app tsc -p abandono-app/tsconfig.app.json --noEmit)",
+      "Read(//tmp/**)"
     ]
   }
 }
